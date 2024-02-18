@@ -5,13 +5,15 @@ export default {
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
-    colors: {
+    
+    extend: {colors: {
       primary:{
         light:"#FB9300",
         default:"#F68712"
       },
       secondary:{
         default:"#FEF5EC",
+        light:"#fffcf9"
       },
       accent:{
         default:"#F9F9F9",
@@ -23,9 +25,15 @@ export default {
       },
       heighLight:{
         focus:"#FF7733"
+      },
+      sidebarText:{
+        active:"#50466C",
+        inactive:"#C1BBD5"
+      },
+      "gary":{
+        light:"#f9fafb"
       }
-    },
-    extend: {},
+    }},
   },
   plugins: [],
 }

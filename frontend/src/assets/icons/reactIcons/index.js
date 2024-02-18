@@ -15,6 +15,7 @@ import { TiPlus } from "react-icons/ti";
 import { MdLogin } from "react-icons/md";
 import { MdOutlineKeyboardArrowLeft } from "react-icons/md";
 import { MdKeyboardArrowRight } from "react-icons/md";
+import { FaBookMedical } from "react-icons/fa";
 
 
 
@@ -36,6 +37,6 @@ export {
     MdLogin as LoginIcon,
     MdOutlineKeyboardArrowLeft as KeyboardArrowLeftIcon,
     MdKeyboardArrowRight as KeyboardArrowRightIcon,
- 
+    FaBookMedical as BookFavIcon,
 
 }
