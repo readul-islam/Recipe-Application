@@ -1,8 +1,16 @@
 import React from 'react'
+import Banner from './Banner'
+import RecipeCard from '../../components/UI Components/RecipeCard'
+import LikedRecipes from './LikedRecipes'
 
 const Overview = () => {
   return (
-    <div>Overview</div>
+    <div>
+
+<Banner/>
+
+<LikedRecipes/>
+    </div>
   )
 }
 
