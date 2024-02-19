@@ -32,6 +32,9 @@ export default {
       },
       "gary":{
         light:"#f9fafb"
+      },
+      bannerBg:{
+        default:"#F9F9F9"
       }
     }},
   },

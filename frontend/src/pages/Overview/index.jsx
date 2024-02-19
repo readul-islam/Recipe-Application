@@ -5,12 +5,12 @@ import LikedRecipes from './LikedRecipes'
 
 const Overview = () => {
   return (
-    <div>
+    <>
 
 <Banner/>
 
 <LikedRecipes/>
-    </div>
+    </>
   )
 }
 

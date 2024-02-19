@@ -12,7 +12,7 @@ const sidebarRoutes = [
   {
     name: "Overview",
     Icon: <GridIcon size={20} />,
-    path: "/app",
+    path: "overview",
   },
   {
     name: "Recipes",
@@ -27,7 +27,7 @@ const sidebarRoutes = [
   {
     name: "Favorite",
     Icon: <FavoriteIcon size={20} />,
-    path: "favorite",
+    path: "favorites",
   },
   {
     name: "Setting",

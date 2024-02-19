@@ -1,6 +1,12 @@
 import React, { useMemo, useState } from "react";
 import Recipe from "../../assets/images/recipe.jpeg";
-import { StarFillIcon, TimeIcon } from "../../assets/icons/reactIcons";
+import {
+  HeartEmptyIcon,
+  HeartFillIcon,
+  StarFillIcon,
+  TimeIcon,
+} from "../../assets/icons/reactIcons";
+import { Tooltip } from "react-tooltip";
 import Onion from "../../assets/images/onion.png";
 const ingredients = [
   {
@@ -42,7 +48,7 @@ const RecipeCard = () => {
 
   return (
     <>
-      <div className="container sm:w-[335px] 2xl:w-80 border-2 border-gray-100 rounded-2xl p-6">
+      <div className="container relative  sm:w-[335px] 2xl:w-[340px] border-2 border-gray-100 rounded-2xl p-6">
         <div className="header-section flex items-center space-x-4">
           <div className="w-24">
             <img className="rounded-full" src={Recipe} alt="" />
@@ -87,6 +93,17 @@ const RecipeCard = () => {
             <TimeIcon size={19} className="" />
             <p className="text-xs">15 mins</p>
           </div>
+        </div>
+
+        <div
+          className="my-anchor-element favorite-section cursor-pointer absolute top-4 right-5 border-2 border-gray-200 rounded-full"
+         
+        >
+          <HeartFillIcon className="p-1   hover:fill-red-600" size={25} />
+          {/* <HeartEmptyIcon className="p-1 hover:fill-red-500" size={25}/> */}
+          <Tooltip className="favorite-tooltip" anchorSelect=".my-anchor-element" place="top">
+           Add To Favorite
+          </Tooltip>
         </div>
       </div>
     </>

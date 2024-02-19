@@ -11,7 +11,7 @@ import {
   SearchIcon,
 } from "../../../assets/icons/reactIcons";
 
-import logo from "../../../assets/images/logo.png"
+import logo from "../../../assets/images/logo.png";
 const Header = (props) => {
   return (
     <>
@@ -20,19 +20,17 @@ const Header = (props) => {
           <div className="flex items-center gap-2 sm:gap-4 lg:hidden">
             {/* <!-- Hamburger Toggle BTN --> */}
             <MenuIcon
-            size={20}
+              size={20}
               onClick={(e) => {
                 e.stopPropagation();
                 props.setSidebarOpen(!props.sidebarOpen);
               }}
-              
             />
-            
-          
+
             {/* <!-- Hamburger Toggle BTN --> */}
 
             <Link className="block flex-shrink-0 lg:hidden" to="/">
-           {/* <img width={100} src={logo} alt="" /> */}
+              {/* <img width={100} src={logo} alt="" /> */}
             </Link>
           </div>
 

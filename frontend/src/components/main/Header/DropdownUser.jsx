@@ -1,5 +1,5 @@
-import { useEffect, useRef, useState } from 'react';
-import { Link } from 'react-router-dom';
+import { useEffect, useRef, useState } from "react";
+import { Link } from "react-router-dom";
 
 // import UserOne from '../../images/user/user-01.png';
 
@@ -21,8 +21,8 @@ const DropdownUser = () => {
         return;
       setDropdownOpen(false);
     };
-    document.addEventListener('click', clickHandler);
-    return () => document.removeEventListener('click', clickHandler);
+    document.addEventListener("click", clickHandler);
+    return () => document.removeEventListener("click", clickHandler);
   });
 
   // close if the esc key is pressed
@@ -31,8 +31,8 @@ const DropdownUser = () => {
       if (!dropdownOpen || keyCode !== 27) return;
       setDropdownOpen(false);
     };
-    document.addEventListener('keydown', keyHandler);
-    return () => document.removeEventListener('keydown', keyHandler);
+    document.addEventListener("keydown", keyHandler);
+    return () => document.removeEventListener("keydown", keyHandler);
   });
 
   return (
@@ -50,10 +50,11 @@ const DropdownUser = () => {
           <span className="block text-xs">UX Designer</span>
         </span> */}
 
-        
-       
-        <img class="w-7 h-7 p-1 rounded-full ring-2 ring-gray-300 dark:ring-gray-500" src="https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_640.png" alt="Bordered avatar"/>
-        
+        <img
+          class="w-7 h-7 p-1 rounded-full ring-2 ring-gray-300 dark:ring-gray-500"
+          src="https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_640.png"
+          alt="Bordered avatar"
+        />
 
         <svg
           className="hidden fill-current sm:block"
@@ -77,8 +78,8 @@ const DropdownUser = () => {
         ref={dropdown}
         onFocus={() => setDropdownOpen(true)}
         onBlur={() => setDropdownOpen(false)}
-        className={`absolute right-0 mt-4 flex w-62.5 flex-col rounded-sm border border-stroke bg-white shadow-default dark:border-strokedark dark:bg-boxdark ${
-          dropdownOpen === true ? 'block' : 'hidden'
+        className={`absolute right-0 mt-4 flex w-60 pt-4 flex-col rounded-sm border border-stroke bg-white shadow-default  ${
+          dropdownOpen === true ? "block" : "hidden"
         }`}
       >
         <ul className="flex flex-col gap-5 border-b border-stroke px-6 py-7.5 dark:border-strokedark">
@@ -131,7 +132,7 @@ const DropdownUser = () => {
           <li>
             <Link
               to="/pages/settings"
-              className="flex items-center gap-3.5 text-sm font-medium duration-300 ease-in-out hover:text-primary lg:text-base"
+              className="flex items-center gap-3.5 text-sm font-medium duration-300 ease-in-out hover:text-primary lg:text-base pb-3"
             >
               <svg
                 className="fill-current"

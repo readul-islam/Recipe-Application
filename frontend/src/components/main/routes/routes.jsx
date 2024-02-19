@@ -4,6 +4,8 @@ import {
 import LandingPage from "../../../pages/Landing/Landing";
 import MainLayout from "../container/MainLayout";
 import Overview from "../../../pages/Overview";
+import Recipes from "../../../pages/Recipes";
+import PublicRecipes from "../../../pages/Public/PublicRecipes";
 
 const router = createBrowserRouter([
     {
@@ -11,12 +13,28 @@ const router = createBrowserRouter([
       element: <LandingPage/>,
     },
     {
+      path: "/recipes",
+      element: <PublicRecipes/>,
+    },
+    {
       path: "/app",
       element: <MainLayout/>,
       children:[
         {
-          index:true,
+      index:true,
           element:<Overview/>
+        },
+        {
+         path: "overview",
+          element:<Overview/>
+        },
+        {
+        path: "recipes",
+          element:<Recipes/>
+        },
+        {
+        path: "favorites",
+          element:<Recipes/>
         }
       ]
     },

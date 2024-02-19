@@ -17,6 +17,8 @@ import { MdOutlineKeyboardArrowLeft } from "react-icons/md";
 import { MdKeyboardArrowRight } from "react-icons/md";
 import { FaBookMedical } from "react-icons/fa";
 import { RxCross2 } from "react-icons/rx";
+import { IoMdHeart ,IoMdHeartEmpty} from "react-icons/io";
+
 
 
 
@@ -39,6 +41,8 @@ export {
     MdOutlineKeyboardArrowLeft as KeyboardArrowLeftIcon,
     MdKeyboardArrowRight as KeyboardArrowRightIcon,
     FaBookMedical as BookFavIcon,
-    RxCross2 as CrossIcon
+    RxCross2 as CrossIcon,
+    IoMdHeart as HeartFillIcon,
+    IoMdHeartEmpty as HeartEmptyIcon
 
 }
