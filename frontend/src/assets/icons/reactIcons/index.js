@@ -15,9 +15,10 @@ import { TiPlus } from "react-icons/ti";
 import { MdLogin } from "react-icons/md";
 import { MdOutlineKeyboardArrowLeft } from "react-icons/md";
 import { MdKeyboardArrowRight } from "react-icons/md";
-import { FaBookMedical } from "react-icons/fa";
+import { FaBookMedical ,FaBook,FaThumbsUp} from "react-icons/fa";
 import { RxCross2 } from "react-icons/rx";
 import { IoMdHeart ,IoMdHeartEmpty} from "react-icons/io";
+
 
 
 
@@ -40,9 +41,11 @@ export {
     MdLogin as LoginIcon,
     MdOutlineKeyboardArrowLeft as KeyboardArrowLeftIcon,
     MdKeyboardArrowRight as KeyboardArrowRightIcon,
-    FaBookMedical as BookFavIcon,
+    // FaBookMedical as BookFavIcon,
     RxCross2 as CrossIcon,
     IoMdHeart as HeartFillIcon,
-    IoMdHeartEmpty as HeartEmptyIcon
+    IoMdHeartEmpty as HeartEmptyIcon,
+     FaBook as BookFavIcon,
+     FaThumbsUp as ThumbsUpIcon,
 
 }
