@@ -9,20 +9,26 @@ const Tabs = ({ children }) => {
   };
 
   return (
-    <div className="md:flex md:space-x-8 items-baseline  ">
-      <div className="flex md:flex-col  items-start md:w-48 ">
-        {children.map((child) => (
+    <div className="xl:flex  xl:space-x-8  w-full items-start  ">
+      <div className="flex xl:flex-col  items-start xl:w-48 ">
+        {children.map((child, index) => (
           <button
             key={child.props.label}
             className={`${
               activeTab === child.props.label
-                ? "md:border-r-2 border-b-2 md:border-b-0   text-primary-default  border-primary-default"
+                ? "2xl:border-r-2 border-b-2 2xl:border-b-0   text-primary-default  border-primary-default"
                 : ""
-            }  font-semibold  md:pr-8 py-4 w-full md:text-left md:flex md:border-r-2 border-b-2 md:border-b-0 `}
+            }  font-semibold  md:pr-8 py-4 ${
+              index === 0
+                ? "xl:pb-9 xl:pt-0"
+                : index === children.length - 1
+                ? "xl:pt-9"
+                : "xl:py-14"
+            }  w-full md:text-left xl:flex xl:border-r-2 border-b-2 xl:border-b-0 `}
             onClick={(e) => handleClick(e, child.props.label)}
           >
             <div className="flex items-center space-x-2 justify-center">
-              <p className="bg-gray-300 hidden md:flex p-1 shadow rounded-full">
+              <p className="bg-gray-300 hidden xl:flex p-1 shadow rounded-full">
                 {" "}
                 {child.props?.icon}
               </p>
@@ -31,7 +37,7 @@ const Tabs = ({ children }) => {
           </button>
         ))}
       </div>
-      <div className="py-4">
+      <div className="py-4 w-full">
         {children?.map((child) => {
           if (child.props.label === activeTab) {
             return <div key={child.props.label}>{child.props.children}</div>;
@@ -45,7 +51,7 @@ const Tabs = ({ children }) => {
 
 const Tab = ({ label, children }) => {
   return (
-    <div label={label} className="hidden">
+    <div label={label} className="hidden w-full">
       {children}
     </div>
   );

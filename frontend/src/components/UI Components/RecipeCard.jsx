@@ -48,7 +48,7 @@ const RecipeCard = () => {
 
   return (
     <>
-      <div className="container relative  sm:w-[335px] 2xl:w-[340px] border-2 border-gray-100 rounded-2xl p-6">
+      <div className="container relative  sm:max-w-[335px] 2xl:max-w-[340px] border-2 border-gray-100 rounded-2xl p-6">
         <div className="header-section flex items-center space-x-4">
           <div className="w-24">
             <img className="rounded-full" src={Recipe} alt="" />

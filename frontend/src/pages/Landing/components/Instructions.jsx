@@ -1,40 +1,44 @@
-import React from 'react'
-import { BookFavIcon, ForwardIcon, ThumbsUpIcon } from '../../../assets/icons/reactIcons'
+import React from "react";
+import {
+  BookFavIcon,
+  ForwardIcon,
+  ThumbsUpIcon,
+} from "../../../assets/icons/reactIcons";
 const data = [
-    {
-      step: "Read Recipe",
-      image: "https://i.ibb.co/2gbw7sk/recipe-book.png",
-      description: `Search and read what recipe you want to cook. Find 100+ more recipes available in MadangGeden.Follow all instruction properly`,
-    },
-    {
-      step: "Prepare the Ingredients",
-      image:
-        "https://i.ibb.co/wSrDkX6/Screenshot-from-2024-02-19-19-12-39-removebg-preview.png",
-      description:
-        "Prepare cooking utensils and food ingredients that will be used for the menu you will cook and go for next step => start cooking",
-    },
-    {
-      step: "Start Cooking",
-      image: "https://i.ibb.co/wCcGdCS/cooking.png",
-      description:
-        "Cook the menu of the dishes you cook, according to the instruc tions listed in the recipe guide that you cook.",
-    },
-    {
-      step: "Enjoy Your Food",
-      image: "https://i.ibb.co/mq7MM3B/d.png",
-      description:
-        "Wow your cook is ready for serve. Serve the food you have cooked, then enjoy the meal with your family. Enjoy your meal.",
-    },
-  ];
-  const data2 = [
-    { title: "Food Recipes", total: "100", icon: <BookFavIcon size={20} /> },
-    { title: "Best Menu", total: "100", icon: <ThumbsUpIcon size={20} /> },
-    { title: "People Satisfied", total: "10k", icon: "🥰" },
-  ];
+  {
+    step: "Read Recipe",
+    image: "https://i.ibb.co/2gbw7sk/recipe-book.png",
+    description: `Search and read what recipe you want to cook. Find 100+ more recipes available in MadangGeden.Follow all instruction properly`,
+  },
+  {
+    step: "Prepare the Ingredients",
+    image:
+      "https://i.ibb.co/wSrDkX6/Screenshot-from-2024-02-19-19-12-39-removebg-preview.png",
+    description:
+      "Prepare cooking utensils and food ingredients that will be used for the menu you will cook and go for next step => start cooking",
+  },
+  {
+    step: "Start Cooking",
+    image: "https://i.ibb.co/wCcGdCS/cooking.png",
+    description:
+      "Cook the menu of the dishes you cook, according to the instruc tions listed in the recipe guide that you cook.",
+  },
+  {
+    step: "Enjoy Your Food",
+    image: "https://i.ibb.co/mq7MM3B/d.png",
+    description:
+      "Wow your cook is ready for serve. Serve the food you have cooked, then enjoy the meal with your family. Enjoy your meal.",
+  },
+];
+const data2 = [
+  { title: "Food Recipes", total: "100", icon: <BookFavIcon size={20} /> },
+  { title: "Best Menu", total: "100", icon: <ThumbsUpIcon size={20} /> },
+  { title: "People Satisfied", total: "10k", icon: "🥰" },
+];
 const Instructions = () => {
   return (
     <>
- <div className="additional max-w-screen-2xl mx-auto grid md:grid-cols-2 mt-16 px-5">
+      <div className="additional max-w-screen-2xl mx-auto grid md:grid-cols-2 mt-16 lg:px-16 xl:px-0 px-5">
         {/* additional */}
 
         <div>
@@ -120,9 +124,8 @@ const Instructions = () => {
 
         {/* <div></div> */}
       </div>
-
     </>
-  )
-}
+  );
+};
 
-export default Instructions
+export default Instructions;

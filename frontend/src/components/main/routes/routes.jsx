@@ -6,11 +6,22 @@ import MainLayout from "../container/MainLayout";
 import Overview from "../../../pages/Overview";
 import Recipes from "../../../pages/Recipes";
 import PublicRecipes from "../../../pages/Public/PublicRecipes";
+import Login from "../../../pages/Auth/Login";
+import SignUp from "../../../pages/Auth/SignUp";
+
 
 const router = createBrowserRouter([
     {
       path: "/",
       element: <LandingPage/>,
+    },
+    {
+      path: "/login",
+      element: <Login/>,
+    },
+    {
+      path: "/register",
+      element: <SignUp/>,
     },
     {
       path: "/recipes",
