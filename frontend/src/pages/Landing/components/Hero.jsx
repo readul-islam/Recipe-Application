@@ -6,10 +6,10 @@ const Hero = () => {
   return (
     <>
       <div className=" bg-bannerBg-default">
-        <div className="Banner px-4 lg:px-16 2xl:px-0 md:px-5 max-w-screen-2xl mx-auto flex  pt-28 pb-10 justify-between   md:flex-row items-center ">
+        <div className="Banner px-4 lg:px-16 2xl:px-0 md:px-5 max-w-screen-2xl mx-auto flex  pt-32 pb-20 justify-between   md:flex-row items-center ">
           <div className="flex flex-col space-y-4 lg:pr-20 xl:pr-0 md:pt-0 ">
-            <h3 className="xl:text-5xl text-3xl text-center md:text-left 2xl:text-6xl lg:text-[38px] md:text-4xl  leading-tight  font-bold max-w-2xl ">
-              Make Delicious food and feel experience like a{" "}
+            <h3 className="xl:text-5xl text-3xl text-center md:text-left 2xl:text-5xl lg:text-[38px] md:text-4xl  leading-tight  font-bold max-w-2xl ">
+              Make Delicious food <br /> and feel experience like a{" "}
               professional chef.
             </h3>
             <p className="text-gray-500 text-xs xl:text-base md:max-w-sm md:text-xs lg:text-sm lg:max-w-xl  xl:pt-3 lg:pb-2 xl:pb-4 text-center md:text-left">

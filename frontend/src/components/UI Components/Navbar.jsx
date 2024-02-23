@@ -6,7 +6,7 @@ import { LoginIcon } from '../../assets/icons/reactIcons'
 const menu = [
     {name:"Home", path:"/" || "/home"},
     {name:"Recipe", path:"/recipes"},
-    {name:"About Us", path:"/about"}
+    {name:"About Us", path:"/about-us"}
   ]
 const Navbar = () => {
   return (
@@ -14,14 +14,16 @@ const Navbar = () => {
     <nav class="bg-bannerBg-default lg:px-16 fixed w-full z-20 top-0 start-0">
   <div class="max-w-screen-2xl flex flex-wrap items-center justify-between mx-auto p-4">
   <Link to='/'>
-      <img src={Logo} class="h-8 w-28 xs:w-full" alt=""/>
+    <div className=' max-w-32 md:max-w-48 '>  <img src={Logo} class="" alt=""/></div>
       
   </Link>
   <div class="flex md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse">
+   <Link to="/login">
    <PrimaryBtn style="flex items-center text-sm sm:text-base space-x-1 rounded-md text-white tracking-wider">
   <LoginIcon/>
-  <p>Login</p>
+<p>Login</p>
    </PrimaryBtn>
+   </Link>
       <button data-collapse-toggle="navbar-sticky" type="button" class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" aria-controls="navbar-sticky" aria-expanded="false">
         <span class="sr-only">Open main menu</span>
         <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">

@@ -8,12 +8,17 @@ import Recipes from "../../../pages/Recipes";
 import PublicRecipes from "../../../pages/Public/PublicRecipes";
 import Login from "../../../pages/Auth/Login";
 import SignUp from "../../../pages/Auth/SignUp";
+import About from "../../../pages/About";
 
 
 const router = createBrowserRouter([
     {
       path: "/",
       element: <LandingPage/>,
+    },
+    {
+      path: "/about-us",
+      element: <About/>,
     },
     {
       path: "/login",
