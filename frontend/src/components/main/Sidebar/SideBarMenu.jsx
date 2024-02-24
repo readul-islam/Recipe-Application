@@ -1,37 +1,42 @@
 import React from "react";
-import {
-  FavoriteIcon,
-  FilterIcon,
-  GridIcon,
-  RecipeIcon,
-  SettingIcon,
-} from "../../../assets/icons/reactIcons";
+// import {
+//   FavoriteIcon,
+//   FilterIcon,
+//   GridIcon,
+//   RecipeIcon,
+//   SettingIcon,
+// } from "../../../assets/icons/reactIcons";
 import { NavLink } from "react-router-dom";
 
 const sidebarRoutes = [
   {
     name: "Overview",
-    Icon: <GridIcon size={20} />,
+    Icon:"🥰",
+    // Icon: <GridIcon size={20} />,
     path: "overview",
   },
   {
     name: "Recipes",
-    Icon: <RecipeIcon size={20} />,
+    Icon: "🥰",
+    // Icon: <RecipeIcon size={20} />,
     path: "recipes",
   },
   {
     name: "Filter",
-    Icon: <FilterIcon size={20} />,
+    // Icon: <FilterIcon size={20} />,
+    Icon:"🥰",
     path: "filter",
   },
   {
     name: "Favorite",
-    Icon: <FavoriteIcon size={20} />,
+    Icon: "🥰",
+    // Icon: <FavoriteIcon size={20} />,
     path: "favorites",
   },
   {
     name: "Setting",
-    Icon: <SettingIcon size={20} />,
+    // Icon: <SettingIcon size={20} />,
+    Icon: "🥰",
     path: "setting",
   },
 ];

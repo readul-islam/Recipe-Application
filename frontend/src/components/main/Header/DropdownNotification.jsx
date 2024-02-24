@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from 'react';
 import { Link } from 'react-router-dom';
-import { NotificationIcon } from '../../../assets/icons/reactIcons';
+// import { NotificationIcon } from '../../../assets/icons/reactIcons';
 
 const DropdownNotification = () => {
   const [dropdownOpen, setDropdownOpen] = useState(false);
@@ -53,7 +53,7 @@ const DropdownNotification = () => {
           <span className="absolute -z-1 inline-flex h-full w-full animate-ping rounded-full bg-meta-1 opacity-75"></span>
         </span>
 
-        <NotificationIcon className='text-primary-default' size={20}/>
+        {/* <NotificationIcon className='text-primary-default' size={20}/> */}
       </Link>
 
       <div

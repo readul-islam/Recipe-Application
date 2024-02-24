@@ -9,6 +9,8 @@ import PublicRecipes from "../../../pages/Public/PublicRecipes";
 import Login from "../../../pages/Auth/Login";
 import SignUp from "../../../pages/Auth/SignUp";
 import About from "../../../pages/About";
+import Demo from "../../UI Components/Demo";
+import AddRecipe from "../../../pages/AddRecipe";
 
 
 const router = createBrowserRouter([
@@ -16,6 +18,7 @@ const router = createBrowserRouter([
       path: "/",
       element: <LandingPage/>,
     },
+    
     {
       path: "/about-us",
       element: <About/>,
@@ -51,7 +54,11 @@ const router = createBrowserRouter([
         {
         path: "favorites",
           element:<Recipes/>
-        }
+        },
+        {
+          path: "add-recipe",
+          element: <AddRecipe/>,
+        },
       ]
     },
   ]);

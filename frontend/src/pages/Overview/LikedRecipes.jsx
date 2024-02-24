@@ -1,6 +1,6 @@
 import React from 'react'
 import RecipeCard from '../../components/UI Components/RecipeCard'
-import { ForwardIcon } from '../../assets/icons/reactIcons'
+// import { ForwardIcon } from '../../assets/icons/reactIcons'
 const recipes = [1,2,3,4]
 const LikedRecipes = () => {
   return (
@@ -9,7 +9,7 @@ const LikedRecipes = () => {
 <h3 className='text-xl font-semibold tracking-wider'>Based On The Food You Like</h3>
 <div className='md:flex items-center  space-x- tracking-wider text-primary-default cursor-pointer font-semibold px-4 hidden'>
    <p>See more</p>
-   <ForwardIcon size={16} className='font-bold'/>
+   {/* <ForwardIcon size={16} className='font-bold'/> */}
 </div>
 </div>
 

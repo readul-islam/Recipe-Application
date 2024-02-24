@@ -1,8 +1,10 @@
 
 
-const PrimaryBtn = ({style,children}) => {
+const PrimaryBtn = ({style, children , ...others}) => {
   return (
-    <button className={`${style} bg-primary-default px-2 py-1.5`}>
+    <button
+   {...others}
+    className={`${style} bg-primary-default px-2 py-1.5`}>
         {children}
     </button>
   )

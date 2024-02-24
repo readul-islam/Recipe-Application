@@ -1,9 +1,9 @@
 import React from "react";
-import {
-  BookFavIcon,
-  ForwardIcon,
-  ThumbsUpIcon,
-} from "../../../assets/icons/reactIcons";
+// import {
+//   BookFavIcon,
+//   ForwardIcon,
+//   ThumbsUpIcon,
+// } from "../../../assets/icons/reactIcons";
 const data = [
   {
     step: "Read Recipe",
@@ -31,8 +31,14 @@ const data = [
   },
 ];
 const data2 = [
-  { title: "Food Recipes", total: "100", icon: <BookFavIcon size={20} /> },
-  { title: "Best Menu", total: "100", icon: <ThumbsUpIcon size={20} /> },
+  { title: "Food Recipes", total: "100", 
+  // icon: <BookFavIcon size={20} /> 
+  icon: "🥰"
+},
+  { title: "Best Menu", total: "100",
+   icon: "🥰" 
+  //  icon: <ThumbsUpIcon size={20} /> 
+  },
   { title: "People Satisfied", total: "10k", icon: "🥰" },
 ];
 const Instructions = () => {
@@ -43,28 +49,21 @@ const Instructions = () => {
 
         <div>
           <div className="relative">
-            <div className="border-l-2 absolute h-[290px] top-7 left-[14px]" />
-            {data.map((item, index) => (
-              <div
-                key={index}
-                className={` flex relative  items-center space-x-5 pb-9`}
-              >
-                <div className="w-8 p-1 border  bg-gray-200 rounded-full">
-                  <img
-                    className="rounded-full w-full"
-                    src={item.image}
-                    alt=""
-                  />
-                </div>
-
-                <div>
-                  <h3 className="font-semibold pb-1">{item.step}</h3>
-                  <p className="text-xs text-gray-500 max-w-lg text-balance">
-                    {item.description}
-                  </p>
-                </div>
-              </div>
+            {/* <div className="border-l-2 absolute h-[290px] top-7 left-[14px]" /> */}
+          
+             
+              <ol class="relative text-gray-500 border-s border-gray-200 dark:border-gray-700 dark:text-gray-400"> 
+  {data.map((item, index) => (
+              <li class="mb-10 ms-6">            
+                  <span class="absolute flex items-center justify-center w-8 h-8 bg-green-200 rounded-full -start-4 ring-4 ring-white dark:ring-gray-900 dark:bg-green-900">
+                     <img className="w-4" src={item.image}/>
+                  </span>
+                  <h3 class="font-semibold text-black pb-1 leading-tight">{item.step}</h3>
+                  <p class="text-sm max-w-lg">{item.description}</p>
+              </li>
+            
             ))}
+          </ol>
           </div>
         </div>
 
@@ -116,7 +115,7 @@ const Instructions = () => {
               </div>
               <div className="md:flex items-center  space-x- tracking-wider text-primary-default cursor-pointer font-semibold px-4 hidden">
                 <p>See Feedback</p>
-                <ForwardIcon size={16} className="font-bold" />
+                {/* <ForwardIcon size={16} className="font-bold" /> */}
               </div>
             </div>
           </div>

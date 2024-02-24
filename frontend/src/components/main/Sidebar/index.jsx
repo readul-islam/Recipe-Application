@@ -1,10 +1,8 @@
 import React, { useEffect, useRef, useState } from 'react';
-import { NavLink, useLocation } from 'react-router-dom';
-import SidebarLinkGroup from './SidebarLinkGroup';
+import { Link, NavLink, useLocation } from 'react-router-dom';
+import foodBox from "../../../assets/images/foods.png";
 import Logo from '../../../assets/images/logo.png';
 import SideBarMenu from './SideBarMenu';
-import foodBox from "../../../assets/images/foods.png"
-import { CrossIcon } from '../../../assets/icons/reactIcons';
 
 
 const Sidebar = ({ sidebarOpen, setSidebarOpen }) => {
@@ -88,7 +86,10 @@ const Sidebar = ({ sidebarOpen, setSidebarOpen }) => {
    <div className='absolute  text-white top-[70%] left-[40%] -translate-x-1/2 -translate-y-1/2'>
    <p className='text-xs px-2'>Share Your Own</p>
     <h1 className='text-xs font-bold px-2'>Recipe With Us</h1>
+    <Link to="add-recipe">
+    
     <button className='text-sm ml-[2px] mt-4 hover:bg-gray-200 bg-white text-primary-default py-1.5 px-2 rounded-lg'>Upload Now</button>
+    </Link>
    </div>
     </div>
      </div>

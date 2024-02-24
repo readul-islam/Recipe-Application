@@ -1,5 +1,5 @@
 import React from 'react'
-import { SearchIcon } from '../../assets/icons/reactIcons'
+// import { SearchIcon } from '../../assets/icons/reactIcons'
 
 const SearchBar = ({style}) => {
   return (
@@ -8,7 +8,7 @@ const SearchBar = ({style}) => {
             <form >
               <div className="relative">
                 <button className="absolute left-0 top-1/2 -translate-y-1/2">
-                  <SearchIcon size={18} className="mx-3" />
+                  {/* <SearchIcon size={18} className="mx-3" /> */}
                 </button>
 
                 <div className="w-full">

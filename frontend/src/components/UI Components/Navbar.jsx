@@ -2,7 +2,7 @@ import React from 'react'
 import { Link, NavLink } from 'react-router-dom'
 import PrimaryBtn from './PrimaryBtn'
 import Logo from "../../assets/images/logo.png"
-import { LoginIcon } from '../../assets/icons/reactIcons'
+// import { LoginIcon } from '../../assets/icons/reactIcons'
 const menu = [
     {name:"Home", path:"/" || "/home"},
     {name:"Recipe", path:"/recipes"},
@@ -20,7 +20,7 @@ const Navbar = () => {
   <div class="flex md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse">
    <Link to="/login">
    <PrimaryBtn style="flex items-center text-sm sm:text-base space-x-1 rounded-md text-white tracking-wider">
-  <LoginIcon/>
+  {/* <LoginIcon/> */}
 <p>Login</p>
    </PrimaryBtn>
    </Link>

@@ -4,12 +4,12 @@ import DropdownNotification from "./DropdownNotification";
 import DropdownUser from "./DropdownUser";
 
 import DarkModeSwitcher from "./DarkModeSwitcher";
-import {
-  BookFavIcon,
-  FilterIcon,
-  MenuIcon,
-  SearchIcon,
-} from "../../../assets/icons/reactIcons";
+// import {
+//   BookFavIcon,
+//   FilterIcon,
+//   MenuIcon,
+//   SearchIcon,
+// } from "../../../assets/icons/reactIcons";
 
 import logo from "../../../assets/images/logo.png";
 const Header = (props) => {
@@ -19,13 +19,13 @@ const Header = (props) => {
         <div className="flex flex-grow items-center justify-between px-4 py-4 shadow-2 md:px-6 2xl:px-11">
           <div className="flex items-center gap-2 sm:gap-4 lg:hidden">
             {/* <!-- Hamburger Toggle BTN --> */}
-            <MenuIcon
+            {/* <MenuIcon
               size={20}
               onClick={(e) => {
                 e.stopPropagation();
                 props.setSidebarOpen(!props.sidebarOpen);
               }}
-            />
+            /> */}
 
             {/* <!-- Hamburger Toggle BTN --> */}
 
@@ -38,7 +38,7 @@ const Header = (props) => {
             <form action="https://formbold.com/s/unique_form_id" method="POST">
               <div className="relative">
                 <button className="absolute left-0 top-1/2 -translate-y-1/2">
-                  <SearchIcon size={18} className="mx-3" />
+                  {/* <SearchIcon size={18} className="mx-3" /> */}
                 </button>
 
                 <div className="xl:w-1/2 ">
@@ -67,10 +67,10 @@ const Header = (props) => {
               {/* <!-- Notification Menu Area --> */}
               <DropdownNotification />
 
-              <BookFavIcon
+              {/* <BookFavIcon
                 className="text-primary-default hover:text-primary-light"
                 size={18}
-              />
+              /> */}
               {/* <!-- Notification Menu Area --> */}
 
               {/* <!-- Chat Notification Area --> */}
