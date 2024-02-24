@@ -7,6 +7,7 @@ import SomeRecipe from "./components/SomeRecipe";
 import Subscription from "./components/Subscription";
 import Hero2 from "./components/Hero2";
 import Footer from "./components/Footer";
+import Reviews from "./components/Reviews";
 
 const Landing = () => {
   return (
@@ -19,6 +20,7 @@ const Landing = () => {
       <Instructions />
       <SomeRecipe />
       {/* <Subscription /> */}
+      <Reviews/>
      <Footer/>
     </div>
   );

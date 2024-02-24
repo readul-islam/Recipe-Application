@@ -5,7 +5,7 @@ import { marginSequence } from "../../../utils/styles/global";
 const Footer = () => {
   return (
     <>
-      <section class={`${marginSequence} pt-24 relative  overflow-hidden bg-gray-50`}>
+      <section class={` pt-24 relative  overflow-hidden bg-gray-50`}>
         <img
           className="absolute top-0 right-0 w-52 md:w-auto"
           src="https://i.ibb.co/mz8qLrB/star-background-header.png"
