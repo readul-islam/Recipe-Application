@@ -1,6 +1,7 @@
+import { BellAlertIcon } from '@heroicons/react/24/solid';
 import { useEffect, useRef, useState } from 'react';
 import { Link } from 'react-router-dom';
-// import { NotificationIcon } from '../../../assets/icons/reactIcons';
+
 
 const DropdownNotification = () => {
   const [dropdownOpen, setDropdownOpen] = useState(false);
@@ -53,7 +54,7 @@ const DropdownNotification = () => {
           <span className="absolute -z-1 inline-flex h-full w-full animate-ping rounded-full bg-meta-1 opacity-75"></span>
         </span>
 
-        {/* <NotificationIcon className='text-primary-default' size={20}/> */}
+        <BellAlertIcon className='text-primary-default w-6 h-6' />
       </Link>
 
       <div

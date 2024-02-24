@@ -8,6 +8,7 @@ import Recipe from "../../assets/images/recipe.jpeg";
 // } from "../../assets/icons/reactIcons";
 import { Tooltip } from "react-tooltip";
 import Onion from "../../assets/images/onion.png";
+import { BookmarkIcon } from "@heroicons/react/24/solid";
 const ingredients = [
   {
     name: "flour",
@@ -99,7 +100,7 @@ const RecipeCard = () => {
           className="my-anchor-element favorite-section cursor-pointer absolute top-4 right-5 border-2 border-gray-200 rounded-full"
          
         >
-          {/* <HeartFillIcon className="p-1   hover:fill-red-600" size={25} /> */}
+          <BookmarkIcon className="p-1 text-gray-400  w-6 h-6 hover:text-black" />
           {/* <HeartEmptyIcon className="p-1 hover:fill-red-500" size={25}/> */}
           <Tooltip className="favorite-tooltip" anchorSelect=".my-anchor-element" place="top">
            Add To Favorite

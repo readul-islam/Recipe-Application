@@ -1,42 +1,37 @@
 import React from "react";
-// import {
-//   FavoriteIcon,
-//   FilterIcon,
-//   GridIcon,
-//   RecipeIcon,
-//   SettingIcon,
-// } from "../../../assets/icons/reactIcons";
+import {Squares2X2Icon, BookOpenIcon,Cog8ToothIcon, BookmarkIcon, UserIcon, BellIcon} from "@heroicons/react/24/outline"
 import { NavLink } from "react-router-dom";
 
 const sidebarRoutes = [
   {
     name: "Overview",
     Icon:"🥰",
-    // Icon: <GridIcon size={20} />,
+    Icon: <Squares2X2Icon className="w-5 h-5"/>,
     path: "overview",
   },
   {
     name: "Recipes",
-    Icon: "🥰",
+    Icon: <BookOpenIcon className="w-5 h-5"/>,
     // Icon: <RecipeIcon size={20} />,
     path: "recipes",
   },
   {
-    name: "Filter",
-    // Icon: <FilterIcon size={20} />,
-    Icon:"🥰",
-    path: "filter",
-  },
-  {
     name: "Favorite",
-    Icon: "🥰",
+    Icon: <BookmarkIcon className="w-5 h-5"/>,
     // Icon: <FavoriteIcon size={20} />,
     path: "favorites",
   },
   {
+    name: "Own Recipe",
+    // Icon: <FilterIcon size={20} />,
+    Icon: <UserIcon className="w-5 h-5"/>,
+    path: "filter",
+  },
+  
+  {
     name: "Setting",
     // Icon: <SettingIcon size={20} />,
-    Icon: "🥰",
+    Icon: <Cog8ToothIcon className="w-5 h-5"/>,
     path: "setting",
   },
 ];
@@ -54,7 +49,7 @@ const SideBarMenu = () => {
               : "text-sidebarText-inactive hover:bg-[#ffffff] px-2 py-1.5 rounded-lg hover:text-sidebarText-active hover:font-semibold tracking-wide"
           }
         >
-          <div className="flex items-center space-x-3">
+          <div className="flex items-center space-x-2">
             {Icon}
             <p>{name}</p>
           </div>

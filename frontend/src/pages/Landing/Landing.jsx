@@ -5,6 +5,8 @@ import Hero from "./components/Hero";
 import Instructions from "./components/Instructions";
 import SomeRecipe from "./components/SomeRecipe";
 import Subscription from "./components/Subscription";
+import Hero2 from "./components/Hero2";
+import Footer from "./components/Footer";
 
 const Landing = () => {
   return (
@@ -12,11 +14,12 @@ const Landing = () => {
       <div className="Navbar ">
         <Navbar />
       </div>
-      <Hero />
+      {/* <Hero /> */}
+      <Hero2/>
       <Instructions />
       <SomeRecipe />
-      <Subscription />
-      <div className="footer"></div>
+      {/* <Subscription /> */}
+     <Footer/>
     </div>
   );
 };
