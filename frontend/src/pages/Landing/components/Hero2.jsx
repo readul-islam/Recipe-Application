@@ -1,8 +1,8 @@
 import React from "react";
 import RecipeDesh from "../../../assets/images/desh.png";
-import UserFeedBackCard from "../../../components/UI Components/UserFeedBackCard";
 import ExampleRecipeCard from "../../../components/UI Components/ExampleRecipeCard";
 import ScreenWrapper from "../../../components/UI Components/ScreenWrapper";
+import UserFeedBackCard from "../../../components/UI Components/UserFeedBackCard";
 const Hero2 = () => {
   return (
     <>
@@ -52,11 +52,11 @@ const Hero2 = () => {
               </div>
             </div>
             <div className="relative group md:max-w-lg shadow w-full sm:w-auto    mb-24 text-white font-semibold rounded-md overflow-hidden">
-              <form class="w-full">
-                <div class="relative w-full">
-                  <div class="absolute inset-y-0 start-0 flex items-center ps-3 pointer-events-none">
+              <form className="w-full">
+                <div className="relative w-full">
+                  <div className="absolute inset-y-0 start-0 flex items-center ps-3 pointer-events-none">
                     <svg
-                      class="w-4 h-4 text-gray-500 dark:text-gray-400"
+                      className="w-4 h-4 text-gray-500 dark:text-gray-400"
                       aria-hidden="true"
                       xmlns="http://www.w3.org/2000/svg"
                       fill="none"
@@ -74,13 +74,13 @@ const Hero2 = () => {
                   <input
                     type="search"
                     id="leading-page-search"
-                    class="block w-full  p-4 ps-10 text-sm text-gray-900  rounded-lg bg-white outline-none dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white"
+                    className="block w-full  p-4 ps-10 text-sm text-gray-900  rounded-lg bg-white outline-none dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white"
                     placeholder="Search..."
                     required
                   />
                   <button
                     type="submit"
-                    class="text-white absolute end-2.5 bottom-2 bg-primary-default    font-medium rounded-md text-sm px-4 py-2"
+                    className="text-white absolute end-2.5 bottom-2 bg-primary-default    font-medium rounded-md text-sm px-4 py-2"
                   >
                     Search
                   </button>

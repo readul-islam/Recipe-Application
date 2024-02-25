@@ -1,9 +1,8 @@
+import { ArrowRightEndOnRectangleIcon } from "@heroicons/react/24/solid";
 import React from "react";
 import { Link, NavLink } from "react-router-dom";
-import PrimaryBtn from "./PrimaryBtn";
 import Logo from "../../assets/images/logo.png";
-import { ArrowDownLeftIcon } from "@heroicons/react/24/outline";
-import { ArrowRightEndOnRectangleIcon } from "@heroicons/react/24/solid";
+import PrimaryBtn from "./PrimaryBtn";
 import ScreenWrapper from "./ScreenWrapper";
 // import { LoginIcon } from '../../assets/icons/reactIcons'
 const menu = [
@@ -14,16 +13,16 @@ const menu = [
 const Navbar = () => {
   return (
     <>
-      <nav class="bg-gray-50 fixed  w-full z-20 top-0 start-0">
+      <nav className="bg-gray-50 fixed  w-full z-20 top-0 start-0">
       <ScreenWrapper className={" w-full  !px-1 "}>
-        <div class="max-w-screen-2xl  flex flex-wrap items-center justify-between mx-auto md:pl-7 lg:pr-0 lg:pl-10 xl:pl-4 xl:pr-0 p-4">
+        <div className="max-w-screen-2xl  flex flex-wrap items-center justify-between mx-auto md:pl-7 lg:pr-0 lg:pl-10 xl:pl-4 xl:pr-0 p-4">
           <Link to="/">
             <div className="max-w-32 md:max-w-48 ">
               {" "}
-              <img src={Logo} class="" alt="" />
+              <img src={Logo} className="" alt="" />
             </div>
           </Link>
-          <div class="flex md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse">
+          <div className="flex md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse">
             <Link to="/login">
               <PrimaryBtn style="flex items-center text-sm sm:text-base space-x-1 rounded-md text-white tracking-wider">
                 <ArrowRightEndOnRectangleIcon className="w-5 h-5" />
@@ -33,13 +32,13 @@ const Navbar = () => {
             <button
               data-collapse-toggle="navbar-sticky"
               type="button"
-              class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
+              className="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
               aria-controls="navbar-sticky"
               aria-expanded="false"
             >
-              <span class="sr-only">Open main menu</span>
+              <span className="sr-only">Open main menu</span>
               <svg
-                class="w-5 h-5"
+                className="w-5 h-5"
                 aria-hidden="true"
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"
@@ -56,10 +55,10 @@ const Navbar = () => {
             </button>
           </div>
           <div
-            class="items-center justify-between hidden w-full md:flex md:w-auto md:order-1"
+            className="items-center justify-between hidden w-full md:flex md:w-auto md:order-1"
             id="navbar-sticky"
           >
-            <ul class="flex flex-col p-4 md:p-0 mt-4 font-medium  rounded-lg  md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 ">
+            <ul className="flex flex-col p-4 md:p-0 mt-4 font-medium  rounded-lg  md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 ">
               {menu.map((item) => (
                 <NavLink className="font-semibold" to={`${item.path}`}>
                   {({ isActive, isPending, isTransitioning }) => (

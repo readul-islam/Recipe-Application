@@ -57,16 +57,16 @@ const Instructions = () => {
           <div className="relative  ">
             {/* <div className="border-l-2 absolute h-[290px] top-7 left-[14px]" /> */}
 
-            <ol class="relative  text-gray-500 border-s border-gray-200 dark:border-gray-700 dark:text-gray-400">
+            <ol className="relative  text-gray-500 border-s border-gray-200 dark:border-gray-700 dark:text-gray-400">
               {data.map((item, index) => (
-                <li class="mb-10 ms-6">
-                  <span class="absolute flex items-center justify-center w-8 h-8 bg-green-200 rounded-full -start-4 ring-4 ring-white dark:ring-gray-900 dark:bg-green-900">
+                <li className="mb-10 ms-6">
+                  <span className="absolute flex items-center justify-center w-8 h-8 bg-green-200 rounded-full -start-4 ring-4 ring-white dark:ring-gray-900 dark:bg-green-900">
                     <img className="w-4" src={item.image} />
                   </span>
-                  <h3 class="text-xl font-semibold text-gray-900 mb-1">
+                  <h3 className="text-xl font-semibold text-gray-900 mb-1">
                     {item.step}
                   </h3>
-                  <p class="text-sm max-w-lg">{item.description}</p>
+                  <p className="text-sm max-w-lg">{item.description}</p>
                 </li>
               ))}
             </ol>
@@ -105,15 +105,15 @@ const Instructions = () => {
               cooking.
             </p>
             <div className="flex justify-between items-center">
-              <div class="flex -space-x-4 rtl:space-x-reverse">
+              <div className="flex -space-x-4 rtl:space-x-reverse">
                 <img
-                  class="w-10 h-10 border-2 p-1 border-gray-200 rounded-full dark:border-gray-800"
+                  className="w-10 h-10 border-2 p-1 border-gray-200 rounded-full dark:border-gray-800"
                   src="https://static.vecteezy.com/system/resources/thumbnails/009/397/892/small/woman-face-expression-clipart-design-illustration-free-png.png"
                   alt=""
                 />
 
                 <a
-                  class="flex items-center justify-center w-10 h-10 text-xs  text-white bg-primary-default font-bold border-2 border-white rounded-full hover:bg-gray-600 dark:border-gray-800"
+                  className="flex items-center justify-center w-10 h-10 text-xs  text-white bg-primary-default font-bold border-2 border-white rounded-full hover:bg-gray-600 dark:border-gray-800"
                   href="#"
                 >
                   +99

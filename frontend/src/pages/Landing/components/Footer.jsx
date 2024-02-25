@@ -1,11 +1,9 @@
 import React from "react";
-import ScreenWrapper from "../../../components/UI Components/ScreenWrapper";
-import { marginSequence } from "../../../utils/styles/global";
 
 const Footer = () => {
   return (
     <>
-      <section class={` pt-24 relative  overflow-hidden bg-gray-50`}>
+      <section className={` pt-24 relative  overflow-hidden bg-gray-50`}>
         <img
           className="absolute top-0 right-0 w-52 md:w-auto"
           src="https://i.ibb.co/mz8qLrB/star-background-header.png"
@@ -16,31 +14,31 @@ const Footer = () => {
           src="https://i.ibb.co/dg46tQd/light-orange-blue-1.png"
           alt=""
         />
-        <div class="container px-4 mx-auto">
-          <div class="pb-20 border-b">
-            <div class="flex flex-wrap -m-8">
-              <div class="w-full sm:w-1/2 lg:w-2/12 p-8">
-                <h3 class="mb-6 font-semibold leading-normal">Company</h3>
+        <div className="container px-4 mx-auto">
+          <div className="pb-20 border-b">
+            <div className="flex flex-wrap -m-8">
+              <div className="w-full sm:w-1/2 lg:w-2/12 p-8">
+                <h3 className="mb-6 font-semibold leading-normal">Company</h3>
                 <ul>
-                  <li class="mb-3.5">
+                  <li className="mb-3.5">
                     <a
-                      class="text-gray-600 hover:text-gray-700 font-medium leading-relaxed"
+                      className="text-gray-600 hover:text-gray-700 font-medium leading-relaxed"
                       href="#"
                     >
                       About Us
                     </a>
                   </li>
-                  <li class="mb-3.5">
+                  <li className="mb-3.5">
                     <a
-                      class="text-gray-600 hover:text-gray-700 font-medium leading-relaxed"
+                      className="text-gray-600 hover:text-gray-700 font-medium leading-relaxed"
                       href="#"
                     >
                       Careers
                     </a>
                   </li>
-                  <li class="mb-3.5">
+                  <li className="mb-3.5">
                     <a
-                      class="text-gray-600 hover:text-gray-700 font-medium leading-relaxed"
+                      className="text-gray-600 hover:text-gray-700 font-medium leading-relaxed"
                       href="#"
                     >
                       Press
@@ -48,7 +46,7 @@ const Footer = () => {
                   </li>
                   <li>
                     <a
-                      class="text-gray-600 hover:text-gray-700 font-medium leading-relaxed"
+                      className="text-gray-600 hover:text-gray-700 font-medium leading-relaxed"
                       href="#"
                     >
                       Blog
@@ -56,28 +54,28 @@ const Footer = () => {
                   </li>
                 </ul>
               </div>
-              <div class="w-full sm:w-1/2 lg:w-2/12 p-8">
-                <h3 class="mb-6 font-semibold leading-normal">Pages</h3>
+              <div className="w-full sm:w-1/2 lg:w-2/12 p-8">
+                <h3 className="mb-6 font-semibold leading-normal">Pages</h3>
                 <ul>
-                  <li class="mb-3.5">
+                  <li className="mb-3.5">
                     <a
-                      class="text-gray-600 hover:text-gray-700 font-medium leading-relaxed"
+                      className="text-gray-600 hover:text-gray-700 font-medium leading-relaxed"
                       href="#"
                     >
                       Login
                     </a>
                   </li>
-                  <li class="mb-3.5">
+                  <li className="mb-3.5">
                     <a
-                      class="text-gray-600 hover:text-gray-700 font-medium leading-relaxed"
+                      className="text-gray-600 hover:text-gray-700 font-medium leading-relaxed"
                       href="#"
                     >
                       Register
                     </a>
                   </li>
-                  <li class="mb-3.5">
+                  <li className="mb-3.5">
                     <a
-                      class="text-gray-600 hover:text-gray-700 font-medium leading-relaxed"
+                      className="text-gray-600 hover:text-gray-700 font-medium leading-relaxed"
                       href="#"
                     >
                       Add list
@@ -85,7 +83,7 @@ const Footer = () => {
                   </li>
                   <li>
                     <a
-                      class="text-gray-600 hover:text-gray-700 font-medium leading-relaxed"
+                      className="text-gray-600 hover:text-gray-700 font-medium leading-relaxed"
                       href="#"
                     >
                       Contact
@@ -93,28 +91,28 @@ const Footer = () => {
                   </li>
                 </ul>
               </div>
-              <div class="w-full sm:w-1/2 lg:w-2/12 p-8">
-                <h3 class="mb-6 font-semibold leading-normal">Legal</h3>
+              <div className="w-full sm:w-1/2 lg:w-2/12 p-8">
+                <h3 className="mb-6 font-semibold leading-normal">Legal</h3>
                 <ul>
-                  <li class="mb-3.5">
+                  <li className="mb-3.5">
                     <a
-                      class="text-gray-600 hover:text-gray-700 font-medium leading-relaxed"
+                      className="text-gray-600 hover:text-gray-700 font-medium leading-relaxed"
                       href="#"
                     >
                       Terms
                     </a>
                   </li>
-                  <li class="mb-3.5">
+                  <li className="mb-3.5">
                     <a
-                      class="text-gray-600 hover:text-gray-700 font-medium leading-relaxed"
+                      className="text-gray-600 hover:text-gray-700 font-medium leading-relaxed"
                       href="#"
                     >
                       About Us
                     </a>
                   </li>
-                  <li class="mb-3.5">
+                  <li className="mb-3.5">
                     <a
-                      class="text-gray-600 hover:text-gray-700 font-medium leading-relaxed"
+                      className="text-gray-600 hover:text-gray-700 font-medium leading-relaxed"
                       href="#"
                     >
                       Team
@@ -122,7 +120,7 @@ const Footer = () => {
                   </li>
                   <li>
                     <a
-                      class="text-gray-600 hover:text-gray-700 font-medium leading-relaxed"
+                      className="text-gray-600 hover:text-gray-700 font-medium leading-relaxed"
                       href="#"
                     >
                       Privacy
@@ -130,28 +128,28 @@ const Footer = () => {
                   </li>
                 </ul>
               </div>
-              <div class="w-full sm:w-1/2 lg:w-2/12 p-8">
-                <h3 class="mb-6 font-semibold leading-normal">Resources</h3>
+              <div className="w-full sm:w-1/2 lg:w-2/12 p-8">
+                <h3 className="mb-6 font-semibold leading-normal">Resources</h3>
                 <ul>
-                  <li class="mb-3.5">
+                  <li className="mb-3.5">
                     <a
-                      class="text-gray-600 hover:text-gray-700 font-medium leading-relaxed"
+                      className="text-gray-600 hover:text-gray-700 font-medium leading-relaxed"
                       href="#"
                     >
                       Blog
                     </a>
                   </li>
-                  <li class="mb-3.5">
+                  <li className="mb-3.5">
                     <a
-                      class="text-gray-600 hover:text-gray-700 font-medium leading-relaxed"
+                      className="text-gray-600 hover:text-gray-700 font-medium leading-relaxed"
                       href="#"
                     >
                       Service
                     </a>
                   </li>
-                  <li class="mb-3.5">
+                  <li className="mb-3.5">
                     <a
-                      class="text-gray-600 hover:text-gray-700 font-medium leading-relaxed"
+                      className="text-gray-600 hover:text-gray-700 font-medium leading-relaxed"
                       href="#"
                     >
                       Product
@@ -159,7 +157,7 @@ const Footer = () => {
                   </li>
                   <li>
                     <a
-                      class="text-gray-600 hover:text-gray-700 font-medium leading-relaxed"
+                      className="text-gray-600 hover:text-gray-700 font-medium leading-relaxed"
                       href="#"
                     >
                       Pricing
@@ -167,25 +165,25 @@ const Footer = () => {
                   </li>
                 </ul>
               </div>
-              <div class="w-full sm:w-1/2 lg:w-4/12 p-8">
-                <div class="lg:max-w-sm">
-                  <h3 class="mb-6 font-semibold leading-normal">Subscribe</h3>
-                  <p class="mb-5 font-sans text-gray-600 leading-relaxed">
+              <div className="w-full sm:w-1/2 lg:w-4/12 p-8">
+                <div className="lg:max-w-sm">
+                  <h3 className="mb-6 font-semibold leading-normal">Subscribe</h3>
+                  <p className="mb-5 font-sans text-gray-600 leading-relaxed">
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                   </p>
-                  <div class="mb-3 xl:pl-6 inline-block md:max-w-xl w-full overflow-hidden border border-gray-300 rounded-xl  ">
-                    <div class="flex flex-wrap items-center">
-                      <div class="w-full xl:flex-1">
+                  <div className="mb-3 xl:pl-6 inline-block md:max-w-xl w-full overflow-hidden border border-gray-300 rounded-xl  ">
+                    <div className="flex flex-wrap items-center">
+                      <div className="w-full xl:flex-1">
                         <input
-                          class="p-3 xl:p-0 xl:pr-6 w-full font-medium text-gray-500 placeholder-gray-500 outline-none"
+                          className="p-3 xl:p-0 xl:pr-6 w-full font-medium text-gray-500 placeholder-gray-500 outline-none"
                           type="text"
                           placeholder="Type your e-mail"
                         />
                       </div>
-                      <div class="w-full xl:w-auto">
-                        <div class="block">
+                      <div className="w-full xl:w-auto">
+                        <div className="block">
                           <button
-                            class="py-4 px-8 w-full text-white font-semibold border border-  focus:ring focus:ring-primary-default bg-primary-default  transition ease-in-out duration-200"
+                            className="py-4 px-8 w-full text-white font-semibold border border-  focus:ring focus:ring-primary-default bg-primary-default  transition ease-in-out duration-200"
                             type="button"
                           >
                             Subscribe
@@ -198,21 +196,21 @@ const Footer = () => {
               </div>
             </div>
           </div>
-          <div class="flex flex-wrap justify-between items-center py-6 -m-4">
-            <div class="w-auto p-4">
+          <div className="flex flex-wrap justify-between items-center py-6 -m-4">
+            <div className="w-auto p-4">
               <a href="#">
                 <img src="flaro-assets/logos/flaro-logo-black.svg" alt="" />
               </a>
             </div>
-            <div class="w-auto p-4">
-              <p class="text-sm text-gray-600 font-medium">
+            <div className="w-auto p-4">
+              <p className="text-sm text-gray-600 font-medium">
                 Copyright © 2022 90to. All Rights Reserved
               </p>
             </div>
-            <div class="w-auto p-4">
-              <div class="flex flex-wrap -m-4">
-                <div class="w-auto p-4">
-                  <a class="text-blueGray-400 hover:text-blueGray-500" href="#">
+            <div className="w-auto p-4">
+              <div className="flex flex-wrap -m-4">
+                <div className="w-auto p-4">
+                  <a className="text-blueGray-400 hover:text-blueGray-500" href="#">
                     <svg
                       width="9"
                       height="16"
@@ -227,8 +225,8 @@ const Footer = () => {
                     </svg>
                   </a>
                 </div>
-                <div class="w-auto p-4">
-                  <a class="text-indigo-600 hover:text-indigo-700" href="#">
+                <div className="w-auto p-4">
+                  <a className="text-indigo-600 hover:text-indigo-700" href="#">
                     <svg
                       width="16"
                       height="16"
@@ -243,8 +241,8 @@ const Footer = () => {
                     </svg>
                   </a>
                 </div>
-                <div class="w-auto p-4">
-                  <a class="text-blueGray-400 hover:text-blueGray-500" href="#">
+                <div className="w-auto p-4">
+                  <a className="text-blueGray-400 hover:text-blueGray-500" href="#">
                     <svg
                       width="16"
                       height="15"
@@ -259,8 +257,8 @@ const Footer = () => {
                     </svg>
                   </a>
                 </div>
-                <div class="w-auto p-4">
-                  <a class="text-blueGray-400 hover:text-blueGray-500" href="#">
+                <div className="w-auto p-4">
+                  <a className="text-blueGray-400 hover:text-blueGray-500" href="#">
                     <svg
                       width="15"
                       height="13"
