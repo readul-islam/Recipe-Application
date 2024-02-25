@@ -53,3 +53,7 @@ html {
 #leading-page-search{
   box-shadow: rgba(149, 157, 165, 0.2) 0px 4px 9px;
 }
+
+.cookie-banner{
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}

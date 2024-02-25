@@ -14,4 +14,4 @@ server = app.listen(config.PORT, () => {
 })
 
 // unhandledRejection and  uncaughtException handler
-ExpressLevelErrors.unHandledError(server)
+// ExpressLevelErrors.unHandledError(server)

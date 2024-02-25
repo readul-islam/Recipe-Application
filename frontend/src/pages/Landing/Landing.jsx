@@ -1,14 +1,12 @@
-import { Helmet } from "react-helmet";
 import React from "react";
+import { Helmet } from "react-helmet";
 import "react-tabs/style/react-tabs.css";
 import Navbar from "../../components/UI Components/Navbar";
-import Hero from "./components/Hero";
-import Instructions from "./components/Instructions";
-import SomeRecipe from "./components/SomeRecipe";
-import Subscription from "./components/Subscription";
-import Hero2 from "./components/Hero2";
 import Footer from "./components/Footer";
+import Hero2 from "./components/Hero2";
+import Instructions from "./components/Instructions";
 import Reviews from "./components/Reviews";
+import SomeRecipe from "./components/SomeRecipe";
 
 const Landing = () => {
   return (
@@ -39,7 +37,8 @@ const Landing = () => {
       <SomeRecipe />
       {/* <Subscription /> */}
       <Reviews />
-      <Footer />
+    
+            <Footer />
     </div>
   );
 };
