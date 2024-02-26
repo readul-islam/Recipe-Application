@@ -1,10 +1,16 @@
 import express from 'express'
 import authController from './controller/auth.controller'
+import { validator } from '../../middleware'
+import { registerSchemaValidator } from './helper/validator'
 
 const authRouter = express.Router()
 const router = express.Router()
 
-authRouter.post('/register', authController.register)
+authRouter.post(
+  '/register',
+  validator(registerSchemaValidator),
+  authController.register,
+)
 authRouter.post('/login', authController.login)
 
 router.use('/auth', authRouter)

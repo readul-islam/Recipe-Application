@@ -48,12 +48,12 @@ const Demo = () => {
             </div>
             <form action="">
               <div className="mb-6">
-                <label className="block mb-1.5 text-sm text-gray-900 font-semibold" for="">Email</label>
+                <label className="block mb-1.5 text-sm text-gray-900 font-semibold" htmlFor="">Email</label>
                 <input className="w-full py-3 px-4 text-sm text-gray-900 placeholder-gray-400 border border-gray-200 focus:border-purple-500 focus:outline-purple rounded-lg" type="email" placeholder="pat@saturn.dev"/>
               </div>
               <div className="mb-7">
                 <div className="flex mb-1.5 items-center justify-between">
-                  <label className="block text-sm text-gray-900 font-semibold" for="">Password</label>
+                  <label className="block text-sm text-gray-900 font-semibold" htmlFor="">Password</label>
                   <a className="inline-block text-xs font-semibold text-orange-900 hover:text-gray-900" href="#">Forget password?</a>
                 </div>
                 <div className="relative">
@@ -65,7 +65,7 @@ const Demo = () => {
               </div>
               <div className="flex mb-6 items-center">
                 <input type="checkbox" value="" id=""/>
-                <label className="ml-2 text-xs text-gray-800" for="">Remember for 30 days</label>
+                <label className="ml-2 text-xs text-gray-800" htmlFor="">Remember for 30 days</label>
               </div>
               <button className="relative group block w-full mb-6 py-3 px-5 text-center text-sm font-semibold text-orange-50 bg-orange-900 rounded-full overflow-hidden" type="submit">
                 <div className="absolute top-0 right-full w-full h-full bg-gray-900 transform group-hover:translate-x-full group-hover:scale-102 transition duration-500"></div>
@@ -91,9 +91,9 @@ const Demo = () => {
             <div className="flex items-center">
               <div className="flex flex-shrink-0 self-start w-12 h-12 mr-4 items-center justify-center bg-blue-500 bg-opacity-20 text-blue-500 rounded-xl">
                 <svg width="24" height="24" viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M8.67188 14.3298C8.67188 15.6198 9.66188 16.6598 10.8919 16.6598H13.4019C14.4719 16.6598 15.3419 15.7498 15.3419 14.6298C15.3419 13.4098 14.8119 12.9798 14.0219 12.6998L9.99187 11.2998C9.20187 11.0198 8.67188 10.5898 8.67188 9.36984C8.67188 8.24984 9.54187 7.33984 10.6119 7.33984H13.1219C14.3519 7.33984 15.3419 8.37984 15.3419 9.66984" stroke="#194BFB" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
-                  <path d="M12 6V18" stroke="#194BFB" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
-                  <path d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z" stroke="#194BFB" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                  <path d="M8.67188 14.3298C8.67188 15.6198 9.66188 16.6598 10.8919 16.6598H13.4019C14.4719 16.6598 15.3419 15.7498 15.3419 14.6298C15.3419 13.4098 14.8119 12.9798 14.0219 12.6998L9.99187 11.2998C9.20187 11.0198 8.67188 10.5898 8.67188 9.36984C8.67188 8.24984 9.54187 7.33984 10.6119 7.33984H13.1219C14.3519 7.33984 15.3419 8.37984 15.3419 9.66984" stroke="#194BFB" strokeWidth="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                  <path d="M12 6V18" stroke="#194BFB" strokeWidth="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                  <path d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z" stroke="#194BFB" strokeWidth="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
                 </svg>
               </div>
               <div>
@@ -111,8 +111,8 @@ const Demo = () => {
             <div className="flex items-center">
               <div className="flex flex-shrink-0 self-start w-12 h-12 mr-4 items-center justify-center bg-blue-500 bg-opacity-20 text-blue-500 rounded-xl">
                 <svg width="14" height="20" viewbox="0 0 14 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M7 9C9.20914 9 11 7.20914 11 5C11 2.79086 9.20914 1 7 1C4.79086 1 3 2.79086 3 5C3 7.20914 4.79086 9 7 9Z" stroke="#194BFB" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
-                  <path d="M1 19V17C1 15.9391 1.42143 14.9217 2.17157 14.1716C2.92172 13.4214 3.93913 13 5 13H9C10.0609 13 11.0783 13.4214 11.8284 14.1716C12.5786 14.9217 13 15.9391 13 17V19" stroke="#194BFB" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                  <path d="M7 9C9.20914 9 11 7.20914 11 5C11 2.79086 9.20914 1 7 1C4.79086 1 3 2.79086 3 5C3 7.20914 4.79086 9 7 9Z" stroke="#194BFB" strokeWidth="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                  <path d="M1 19V17C1 15.9391 1.42143 14.9217 2.17157 14.1716C2.92172 13.4214 3.93913 13 5 13H9C10.0609 13 11.0783 13.4214 11.8284 14.1716C12.5786 14.9217 13 15.9391 13 17V19" stroke="#194BFB" strokeWidth="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
                 </svg>
               </div>
               <div>
