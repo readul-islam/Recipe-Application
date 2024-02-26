@@ -1,10 +1,11 @@
 type TUser = {
-  name: string
-  email: string
-  password: string
-  needPasswordChange: boolean
-  imageUrl: string
-  emailVerified: boolean
+  name: string;
+  provider: "google" | "local";
+  email: string;
+  password: string;
+  needPasswordChange: boolean;
+  imageUrl: string;
+  emailVerified: boolean;
 }
 
 export { TUser }
