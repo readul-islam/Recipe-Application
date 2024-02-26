@@ -6,6 +6,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 const config_1 = require("../../../config");
 const catchAsync_1 = __importDefault(require("../../../utils/catchAsync"));
 const recipe_service_1 = require("../services/recipe.service");
+// handleRequestWrapper is a custom wrapper that use for avoid try catch repetition
 class RecipeController extends catchAsync_1.default {
     constructor() {
         super(...arguments);

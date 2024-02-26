@@ -1,6 +1,10 @@
 import { STATUS } from '../../../config'
 import CatchAsync from '../../../utils/catchAsync'
-import { loginService, registerService } from '../service/auth.service'
+import {
+  googleProviderService,
+  loginService,
+  registerService,
+} from '../service/auth.service'
 
 // handleRequestWrapper is a custom wrapper that used for avoid try catch repetition
 class AuthController extends CatchAsync {
@@ -14,6 +18,12 @@ class AuthController extends CatchAsync {
   // auth login
   login = this.handleRequestWrapper(
     loginService,
+    STATUS.OK,
+    'User logged in successfully',
+  )
+  // auth login
+  googleProvider = this.handleRequestWrapper(
+    googleProviderService,
     STATUS.OK,
     'User logged in successfully',
   )

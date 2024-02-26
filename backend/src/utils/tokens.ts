@@ -5,19 +5,18 @@ import { STATUS } from '../config'
 
 export type TJwtPayload = {
   _id: Types.ObjectId
-  role: string
+  provider: string
   email: string
-  iat: number
-  exp: number
+  
 }
 type TVerifyToken = (token: string, secret: string) => JwtPayload
 const dateNowInMillisecond = Math.floor(Date.now() / 1000)
 
-const generateToken = (jwtPayload: TJwtPayload, secret: string) => {
-  return jwt.sign(jwtPayload, secret)
+const generateToken = (jwtPayload: TJwtPayload, secret: string, expire:string) => {
+  return jwt.sign(jwtPayload, secret,{expiresIn:expire})
 }
 
-const verifyToken: TVerifyToken = (token, secret) => {
+const verifyToken: TVerifyToken = (token, secret, ) => {
   try {
     const decoded = jwt.verify(token, secret) as JwtPayload
     return decoded

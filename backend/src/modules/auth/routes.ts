@@ -12,6 +12,7 @@ authRouter.post(
   authController.register,
 )
 authRouter.post('/login', authController.login)
+authRouter.post('/google', authController.googleProvider)
 
 router.use('/auth', authRouter)
 

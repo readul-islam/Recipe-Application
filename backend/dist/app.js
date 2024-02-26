@@ -21,5 +21,5 @@ app.get('/', (req, res) => {
     res.status(200).send({ success: true });
 });
 // App router
-app.use('/api', routes_1.default);
+app.use('/api/v1', routes_1.default);
 exports.default = app;

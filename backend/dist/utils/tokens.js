@@ -9,8 +9,8 @@ const AppError_1 = __importDefault(require("../errors/AppError"));
 const config_1 = require("../config");
 const dateNowInMillisecond = Math.floor(Date.now() / 1000);
 exports.dateNowInMillisecond = dateNowInMillisecond;
-const generateToken = (jwtPayload, secret) => {
-    return jsonwebtoken_1.default.sign(jwtPayload, secret);
+const generateToken = (jwtPayload, secret, expire) => {
+    return jsonwebtoken_1.default.sign(jwtPayload, secret, { expiresIn: expire });
 };
 exports.generateToken = generateToken;
 const verifyToken = (token, secret) => {

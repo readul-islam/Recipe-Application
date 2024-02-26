@@ -1,13 +1,16 @@
 import React from "react";
 import { useSignInWithGoogle } from "react-firebase-hooks/auth";
 import auth from "../../../config/Firebase";
-
+import { useLocation } from 'react-router-dom';
 const GoogleAuth = () => {
+  
+
   const [signInWithGoogle, user, loading, error] = useSignInWithGoogle(auth);
   const googleAuthHandler = async () => {
     signInWithGoogle();
   };
   if (user) {
+    console.log(user)
     const { displayName, emailVerified, email, photoURL } = user?.user;
     const userInfo = {
       name: displayName,

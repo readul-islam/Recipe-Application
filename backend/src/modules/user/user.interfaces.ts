@@ -1,4 +1,6 @@
-type TUser = {
+import { Document } from "mongoose";
+
+interface TUser extends Document  {
   name: string;
   provider: "google" | "local";
   email: string;
