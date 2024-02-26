@@ -2,28 +2,41 @@ import React from 'react';
 import { useSignInWithGoogle } from 'react-firebase-hooks/auth';
 import auth from '../../../config/Firebase';
 import { useLoginWithGoogleMutation } from '../../../redux/features/auth/authApi';
+import { useDispatch } from 'react-redux';
+import { setUser } from '../../../redux/features/auth/authSlice';
+import { useCookies } from 'react-cookie';
+
 const GoogleAuth = () => {
-	const [addUserCredentialToDB, { data, isLoading, isError }] =
-		useLoginWithGoogleMutation(undefined);
+	const [cookies, setCookie] = useCookies(['refresh-token']);
+	const dispatch = useDispatch();
+	const [addUserCredentialToDB, { isLoading, isError }] =
+		useLoginWithGoogleMutation();
+
 	const [signInWithGoogle, user, loading, error] = useSignInWithGoogle(auth);
 	const googleAuthHandler = async () => {
-		signInWithGoogle();
+		await signInWithGoogle();
+		if (user) {
+			console.log(user);
+			const { displayName, emailVerified, email, photoURL } = user?.user;
+			const userInfo = {
+				name: displayName,
+				emailVerified,
+				email,
+				imgUrl: photoURL,
+				provider: 'google',
+			};
+
+			const res = await addUserCredentialToDB(userInfo).unwrap();
+			if (res?.data) {
+				console.log(res.data);
+				dispatch(
+					setUser({ userInfo: res.data.userInfo, token: res.data.token.accessToken })
+				);
+				setCookie('refresh-token', res.data.token.accessToken);
+			}
+		}
 	};
-
-	if (user) {
-		const { displayName, emailVerified, email, photoURL } = user?.user;
-		const userInfo = {
-			name: displayName,
-			emailVerified,
-			email,
-			imgUrl: photoURL,
-			provider: 'google',
-		};
-
-		// addUserCredentialToDB(userInfo);
-	}
-
-	// console.log(data)
+	console.log(cookies);
 	return (
 		<>
 			<div className="flex flex-col items-center">

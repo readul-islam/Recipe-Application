@@ -1,26 +1,15 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { useSignInWithGoogle } from 'react-firebase-hooks/auth';
 import { Link } from 'react-router-dom';
 import Logo from '../../../assets/images/logo.png';
 import auth from '../../../config/Firebase';
 import GoogleAuth from '../GoogleAuth';
+import { useLoginWithGoogleMutation } from '../../../redux/features/auth/authApi';
 const Login = () => {
-	const [signInWithGoogle, user, loading, error] = useSignInWithGoogle(auth);
-	const googleAuthHandler = async () => {
-		signInWithGoogle();
-	};
-	if (user) {
-		const { displayName, emailVerified, email, photoURL } = user?.user;
-		const userInfo = {
-			name: displayName,
-			emailVerified,
-			email,
-			imgUrl: photoURL,
-			provider: 'google',
-		};
+	
 
-		console.log(userInfo);
-	}
+	
+
 	return (
 		<>
 			<div className="min-h-screen bg-gray-100 text-gray-900 flex justify-center">
@@ -31,7 +20,7 @@ const Login = () => {
 						</div>
 						<div className="mt-12 flex flex-col items-center">
 							<div className="w-full flex-1 mt-8">
-								<GoogleAuth />
+								<GoogleAuth  />
 
 								<div className="my-12 border-b text-center">
 									<div className="leading-none px-2 inline-block text-sm text-gray-600 tracking-wide font-medium bg-white transform translate-y-1/2">
@@ -150,4 +139,4 @@ const Login = () => {
 	);
 };
 
-export default React.memo(Login);
+export default (Login);

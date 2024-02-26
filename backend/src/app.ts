@@ -10,7 +10,7 @@ app.use(express.json())
 app.use(express.urlencoded({ extended: true }))
 app.use(
   cors({
-    origin: ['https://assignment-3-rosy-sigma.verce', 'http://localhost:500'],
+    origin: ['https://assignment-3-rosy-sigma.verce', 'http://localhost:5173'],
   }),
 )
 // db connection

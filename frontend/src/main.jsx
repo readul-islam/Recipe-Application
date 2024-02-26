@@ -6,11 +6,14 @@ import './index.css';
 import CustomCookieConsent from './components/cookie/CustomCookieConsent.jsx';
 import { Provider } from 'react-redux';
 import { store } from './redux/store.js';
+import { CookiesProvider } from 'react-cookie';
 ReactDOM.createRoot(document.getElementById('root')).render(
 	<React.StrictMode>
 		<Provider store={store}>
 			<CustomCookieConsent />
-			<RouterProvider router={router} />
+			<CookiesProvider>
+				<RouterProvider router={router} />
+			</CookiesProvider>
 		</Provider>
 	</React.StrictMode>
 );
