@@ -82,6 +82,7 @@ import {
 import { Button, Step, Stepper, Typography } from "@material-tailwind/react";
 import React from "react";
 import AddRecipeForm from "./form/AddRecipeForm";
+import UploadImageView from "../../components/UI Components/UploadImageView";
 
 export default function AddRecipe() {
   const [activeStep, setActiveStep] = React.useState(0);
@@ -92,7 +93,8 @@ export default function AddRecipe() {
   const handlePrev = () => !isFirstStep && setActiveStep((cur) => cur - 1);
 
   return (
-    <div className="w-full relative border rounded-md px-8  py-4">
+    <>
+    {/* <div className="w-full relative border rounded-md px-8  py-4">
       <div className="sticky w-full px-16">
         <Stepper
           activeStep={activeStep}
@@ -153,7 +155,10 @@ export default function AddRecipe() {
         </Stepper>
       </div>
 
-      <div className="mt-24">{activeStep === 0 && <AddRecipeForm />}</div>
+      <div className="mt-24">
+        {activeStep === 0 && <AddRecipeForm />}
+        {activeStep === 1 && <UploadImageView />}
+        </div>
 
       <div className="mt-4 flex justify-between">
         <Button className="bg-primary-default" onClick={handlePrev} disabled={isFirstStep}>
@@ -163,6 +168,8 @@ export default function AddRecipe() {
           Next
         </Button>
       </div>
-    </div>
+    </div> */}
+    <UploadImageView/>
+    </>
   );
 }

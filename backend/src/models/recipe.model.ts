@@ -1,13 +1,13 @@
 import { Schema, model } from 'mongoose'
-import { TRecipe } from '../modules/recipe/recipe.interfaces'
+import { TIngredient, TRecipe, TStep } from '../modules/recipe/helper/recipe.interfaces'
 
-const ingredientSchema = new Schema({
+const ingredientSchema = new Schema<TIngredient>({
   name: { type: String, required: true },
   quantity: { type: String, required: true }, // e.g., "1 cup", "2 tablespoons"
   note: { type: String },
 })
 
-const stepSchema = new Schema({
+const stepSchema = new Schema<TStep>({
   stepNumber: { type: Number, required: true },
   instruction: { type: String, required: true },
   img: { type: String },
@@ -33,4 +33,5 @@ const recipeSchema = new Schema<TRecipe>({
   tags: [{ type: String }], // e.g., ["vegan", "gluten-free"]
 })
 
-const Recipe = model<TRecipe>('Recipe', recipeSchema)
+export const Recipe = model<TRecipe>('Recipe', recipeSchema);
+

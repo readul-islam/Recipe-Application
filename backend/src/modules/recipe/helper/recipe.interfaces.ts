@@ -30,5 +30,5 @@ type TRecipe= {
 
 
   export {
-    TRecipe
+    TRecipe, TStep, TIngredient
   }

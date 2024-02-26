@@ -1,5 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
+exports.Recipe = void 0;
 const mongoose_1 = require("mongoose");
 const ingredientSchema = new mongoose_1.Schema({
     name: { type: String, required: true },
@@ -30,4 +31,4 @@ const recipeSchema = new mongoose_1.Schema({
     images: [{ type: String }], // Array of image URLs
     tags: [{ type: String }], // e.g., ["vegan", "gluten-free"]
 });
-const Recipe = (0, mongoose_1.model)('Recipe', recipeSchema);
+exports.Recipe = (0, mongoose_1.model)('Recipe', recipeSchema);

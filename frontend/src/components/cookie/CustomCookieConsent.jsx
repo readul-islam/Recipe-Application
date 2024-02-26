@@ -1,6 +1,6 @@
-import React, { useState, useEffect } from "react";
-import Cookies from "js-cookie";
 import { motion } from "framer-motion";
+import Cookies from "js-cookie";
+import React, { useEffect, useState } from "react";
 
 const CustomCookieConsent = () => {
   const [showBanner, setShowBanner] = useState(false);
@@ -30,30 +30,30 @@ const CustomCookieConsent = () => {
         initial={{ opacity: 0, y: "100%" }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 2 }}
-        class="fixed bottom-0 cookie-banner inset-x-0 w-full   z-50 overflow-hidden "
+        className="fixed bottom-0 cookie-banner inset-x-0 w-full   z-50 overflow-hidden "
       >
-        <div class="w-full">
-          <div class="py-10 px-8  xl:px-20 cookie-banner   bg-white  ">
-            <div class="flex   flex-wrap -mx-4 items-center">
-              <div class="w-full lg:w-1/2 xl:w-2/3 px-4 mb-8 lg:mb-0">
-                <div class="flex items-start">
-                  <div class="flex-shrink-0 mr-6">
+        <div className="w-full">
+          <div className="py-10 px-8  xl:px-20 cookie-banner   bg-white  ">
+            <div className="flex   flex-wrap -mx-4 items-center">
+              <div className="w-full lg:w-1/2 xl:w-2/3 px-4 mb-8 lg:mb-0">
+                <div className="flex items-start">
+                  <div className="flex-shrink-0 mr-6">
                     <img
                       src="https://shuffle.dev/saturn-assets/images/cookies/cookie-icon-small.svg"
                       alt=""
                     />
                   </div>
-                  <div class="max-w-xl">
-                    <p class="text-gray-500 mb-3">
+                  <div className="max-w-xl">
+                    <p className="text-gray-500 mb-3">
                       By clicking "Accept all cookies" you consent to cookies
                       being stored on your device to improve website navigation
                       and analyze website usage.
                     </p>
                     <a
-                      class="inline-flex items-center text-orange-900 hover:text-gray-700 font-semibold"
+                      className="inline-flex items-center text-orange-900 hover:text-gray-700 font-semibold"
                       href="#"
                     >
-                      <span class="mr-3">Read Our Data Policy</span>
+                      <span className="mr-3">Read Our Data Policy</span>
                       <svg
                         width="13"
                         height="13"
@@ -70,17 +70,17 @@ const CustomCookieConsent = () => {
                   </div>
                 </div>
               </div>
-              <div class="w-full lg:w-1/2 xl:w-1/3 px-4">
-                <div class="flex items-center justify-end">
+              <div className="w-full lg:w-1/2 xl:w-1/3 px-4">
+                <div className="flex items-center justify-end">
                   <p
                     onClick={handleDecline}
-                    class="inline-block mr-4 cursor-pointer py-3 px-5 text-xs md:text-sm font-semibold text-orange-900 border border-gray-200 rounded-md hover:border-orange-900 transition duration-200"
+                    className="inline-block mr-4 cursor-pointer py-3 px-5 text-xs md:text-sm font-semibold text-orange-900 border border-gray-200 rounded-md hover:border-orange-900 transition duration-200"
                   >
                     Decline
                   </p>
                   <p
                     onClick={handleAccept}
-                    class="inline-block cursor-pointer py-3 px-5 text-xs md:text-sm font-semibold text-orange-50 bg-orange-900 hover:bg-gray-900 rounded-md transition duration-200"
+                    className="inline-block cursor-pointer py-3 px-5 text-xs md:text-sm font-semibold text-orange-50 bg-orange-900 hover:bg-gray-900 rounded-md transition duration-200"
                   >
                     Accept all cookies
                   </p>
