@@ -49,11 +49,5 @@
 //   MdOutlineWatchLater as TimeIcon,
 // };
 
-
-
-
-
-const d = "P"
-export{
-    d
-}
+const d = 'P';
+export { d };

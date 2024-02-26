@@ -1,17 +1,16 @@
-import React from 'react'
-import Banner from './Banner'
-import RecipeCard from '../../components/UI Components/RecipeCard'
-import LikedRecipes from './LikedRecipes'
+import React from 'react';
+import Banner from './Banner';
+import RecipeCard from '../../components/UI Components/RecipeCard';
+import LikedRecipes from './LikedRecipes';
 
 const Overview = () => {
-  return (
-    <>
+	return (
+		<>
+			<Banner />
 
-<Banner/>
+			<LikedRecipes />
+		</>
+	);
+};
 
-<LikedRecipes/>
-    </>
-  )
-}
-
-export default Overview
+export default Overview;

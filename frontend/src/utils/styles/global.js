@@ -1,1 +1,1 @@
-export const marginSequence ="mt-20"
+export const marginSequence = 'mt-20';

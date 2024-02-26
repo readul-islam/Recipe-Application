@@ -75,26 +75,26 @@
 
 // export default AddRecipe;
 import {
-    BuildingLibraryIcon,
-    CogIcon,
-    UserIcon,
-} from "@heroicons/react/24/outline";
-import { Button, Step, Stepper, Typography } from "@material-tailwind/react";
-import React from "react";
-import AddRecipeForm from "./form/AddRecipeForm";
-import UploadImageView from "../../components/UI Components/UploadImageView";
+	BuildingLibraryIcon,
+	CogIcon,
+	UserIcon,
+} from '@heroicons/react/24/outline';
+import { Button, Step, Stepper, Typography } from '@material-tailwind/react';
+import React from 'react';
+import AddRecipeForm from './form/AddRecipeForm';
+import UploadImageView from '../../components/UI Components/UploadImageView';
 
 export default function AddRecipe() {
-  const [activeStep, setActiveStep] = React.useState(0);
-  const [isLastStep, setIsLastStep] = React.useState(false);
-  const [isFirstStep, setIsFirstStep] = React.useState(false);
+	const [activeStep, setActiveStep] = React.useState(0);
+	const [isLastStep, setIsLastStep] = React.useState(false);
+	const [isFirstStep, setIsFirstStep] = React.useState(false);
 
-  const handleNext = () => !isLastStep && setActiveStep((cur) => cur + 1);
-  const handlePrev = () => !isFirstStep && setActiveStep((cur) => cur - 1);
+	const handleNext = () => !isLastStep && setActiveStep((cur) => cur + 1);
+	const handlePrev = () => !isFirstStep && setActiveStep((cur) => cur - 1);
 
-  return (
-    <>
-    {/* <div className="w-full relative border rounded-md px-8  py-4">
+	return (
+		<>
+			{/* <div className="w-full relative border rounded-md px-8  py-4">
       <div className="sticky w-full px-16">
         <Stepper
           activeStep={activeStep}
@@ -169,7 +169,7 @@ export default function AddRecipe() {
         </Button>
       </div>
     </div> */}
-    <UploadImageView/>
-    </>
-  );
+			<UploadImageView />
+		</>
+	);
 }

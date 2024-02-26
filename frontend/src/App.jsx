@@ -1,13 +1,9 @@
-
-
 function App() {
-  
-
-  return (
-  <>
-  <p className="bg"></p>
-  </>
-  )
+	return (
+		<>
+			<p className="bg"></p>
+		</>
+	);
 }
 
-export default App
+export default App;
