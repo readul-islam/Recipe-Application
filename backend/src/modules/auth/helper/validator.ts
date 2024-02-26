@@ -9,7 +9,7 @@ const passwordValidator = (field: string) => {
       if (val.length < 6) {
         ctx.addIssue({
           code: z.ZodIssueCode.too_small,
-          minimum: 8,
+          minimum: 6,
           type: 'string',
           inclusive: true,
           message: `${field} must be 😡 at least 6 characters`,
@@ -37,7 +37,7 @@ const passwordValidator = (field: string) => {
       }
     })
 }
-export const registerSchemaValidator = z.object({
+export const googleSchemaValidator = z.object({
   password: passwordValidator('password').optional(),
   email: z
     .string({
@@ -51,6 +51,19 @@ export const registerSchemaValidator = z.object({
   imageUrl: z.string().optional(),
   emailVerified: z.boolean().optional(),
   needPasswordChange: z.boolean().optional(),
+})
+
+export const registerSchemaValidator = z.object({
+  password: passwordValidator('password'),
+  email: z
+    .string({
+      required_error: 'email is required',
+    })
+    .email({ message: 'email must be a valid email' }),
+  provider: z.enum(
+    ['google', 'local'],
+    zodCustomError('provider', 'google or local'),
+  ),
 })
 
 export const loginSchemaValidator = z.object({})

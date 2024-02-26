@@ -3,7 +3,7 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
     return (mod && mod.__esModule) ? mod : { "default": mod };
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.loginSchemaValidator = exports.registerSchemaValidator = void 0;
+exports.loginSchemaValidator = exports.registerSchemaValidator = exports.googleSchemaValidator = void 0;
 const zod_1 = require("zod");
 const zodCustomError_1 = __importDefault(require("../../../utils/zodCustomError"));
 const passwordValidator = (field) => {
@@ -15,7 +15,7 @@ const passwordValidator = (field) => {
         if (val.length < 6) {
             ctx.addIssue({
                 code: zod_1.z.ZodIssueCode.too_small,
-                minimum: 8,
+                minimum: 6,
                 type: 'string',
                 inclusive: true,
                 message: `${field} must be 😡 at least 6 characters`,
@@ -47,7 +47,7 @@ const passwordValidator = (field) => {
         }
     });
 };
-exports.registerSchemaValidator = zod_1.z.object({
+exports.googleSchemaValidator = zod_1.z.object({
     password: passwordValidator('password').optional(),
     email: zod_1.z
         .string({
@@ -58,5 +58,14 @@ exports.registerSchemaValidator = zod_1.z.object({
     imageUrl: zod_1.z.string().optional(),
     emailVerified: zod_1.z.boolean().optional(),
     needPasswordChange: zod_1.z.boolean().optional(),
+});
+exports.registerSchemaValidator = zod_1.z.object({
+    password: passwordValidator('password'),
+    email: zod_1.z
+        .string({
+        required_error: 'email is required',
+    })
+        .email({ message: 'email must be a valid email' }),
+    provider: zod_1.z.enum(['google', 'local'], (0, zodCustomError_1.default)('provider', 'google or local')),
 });
 exports.loginSchemaValidator = zod_1.z.object({});
