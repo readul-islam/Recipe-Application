@@ -214,7 +214,7 @@ const Footer = () => {
 										<svg
 											width="9"
 											height="16"
-											viewbox="0 0 9 16"
+											viewBox="0 0 9 16"
 											fill="none"
 											xmlns="http://www.w3.org/2000/svg"
 										>
@@ -230,7 +230,7 @@ const Footer = () => {
 										<svg
 											width="16"
 											height="16"
-											viewbox="0 0 16 16"
+											viewBox="0 0 16 16"
 											fill="none"
 											xmlns="http://www.w3.org/2000/svg"
 										>
@@ -246,7 +246,7 @@ const Footer = () => {
 										<svg
 											width="16"
 											height="15"
-											viewbox="0 0 16 15"
+											viewBox="0 0 16 15"
 											fill="none"
 											xmlns="http://www.w3.org/2000/svg"
 										>
@@ -262,7 +262,7 @@ const Footer = () => {
 										<svg
 											width="15"
 											height="13"
-											viewbox="0 0 15 13"
+											viewBox="0 0 15 13"
 											fill="none"
 											xmlns="http://www.w3.org/2000/svg"
 										>

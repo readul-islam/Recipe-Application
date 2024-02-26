@@ -9,6 +9,7 @@ import SignUp from '../../../pages/Auth/SignUp';
 import About from '../../../pages/About';
 import Demo from '../../UI Components/Demo';
 import AddRecipe from '../../../pages/AddRecipe';
+import ProtectedRoute from '../container/ProtectedRoute';
 
 const router = createBrowserRouter([
 	{
@@ -34,7 +35,11 @@ const router = createBrowserRouter([
 	},
 	{
 		path: '/app',
-		element: <MainLayout />,
+		element: (
+			<ProtectedRoute>
+				<MainLayout />
+			</ProtectedRoute>
+		),
 		children: [
 			{
 				index: true,

@@ -93,7 +93,7 @@ const Demo = () => {
 											<svg
 												width="24"
 												height="24"
-												viewbox="0 0 24 24"
+												viewBox="0 0 24 24"
 												fill="none"
 												xmlns="http://www.w3.org/2000/svg"
 											>
@@ -139,7 +139,7 @@ const Demo = () => {
 											<svg
 												width="14"
 												height="20"
-												viewbox="0 0 14 20"
+												viewBox="0 0 14 20"
 												fill="none"
 												xmlns="http://www.w3.org/2000/svg"
 											>
@@ -189,7 +189,7 @@ const Demo = () => {
 										<svg
 											width="16"
 											height="16"
-											viewbox="0 0 16 16"
+											viewBox="0 0 16 16"
 											fill="none"
 											xmlns="http://www.w3.org/2000/svg"
 										>
@@ -274,7 +274,7 @@ const Demo = () => {
 														<svg
 															width="10"
 															height="14"
-															viewbox="0 0 10 14"
+															viewBox="0 0 10 14"
 															fill="none"
 															xmlns="http://www.w3.org/2000/svg"
 														>

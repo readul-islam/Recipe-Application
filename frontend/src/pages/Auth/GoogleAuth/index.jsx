@@ -1,10 +1,10 @@
 import React from 'react';
+import { useCookies } from 'react-cookie';
 import { useSignInWithGoogle } from 'react-firebase-hooks/auth';
+import { useDispatch } from 'react-redux';
 import auth from '../../../config/Firebase';
 import { useLoginWithGoogleMutation } from '../../../redux/features/auth/authApi';
-import { useDispatch } from 'react-redux';
 import { setUser } from '../../../redux/features/auth/authSlice';
-import { useCookies } from 'react-cookie';
 
 const GoogleAuth = () => {
 	const [cookies, setCookie] = useCookies(['refresh-token']);

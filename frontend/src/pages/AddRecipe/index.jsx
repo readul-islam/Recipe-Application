@@ -74,14 +74,7 @@
 // };
 
 // export default AddRecipe;
-import {
-	BuildingLibraryIcon,
-	CogIcon,
-	UserIcon,
-} from '@heroicons/react/24/outline';
-import { Button, Step, Stepper, Typography } from '@material-tailwind/react';
 import React from 'react';
-import AddRecipeForm from './form/AddRecipeForm';
 import UploadImageView from '../../components/UI Components/UploadImageView';
 
 export default function AddRecipe() {

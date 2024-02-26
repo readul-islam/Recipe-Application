@@ -6,9 +6,9 @@ const CustomCookieConsent = () => {
 	const [showBanner, setShowBanner] = useState(false);
 	useEffect(() => {
 		// Check if the user has already given consent
-		console.log(Cookies);
+		
 		const consent = Cookies.get('cookie-consent');
-		console.log(consent);
+		
 		if (!consent) {
 			setShowBanner(true);
 		}
@@ -57,7 +57,7 @@ const CustomCookieConsent = () => {
 											<svg
 												width="13"
 												height="13"
-												viewbox="0 0 13 13"
+												viewBox="0 0 13 13"
 												fill="none"
 												xmlns="http://www.w3.org/2000/svg"
 											>

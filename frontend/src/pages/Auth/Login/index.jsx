@@ -1,13 +1,15 @@
 import React, { useEffect } from 'react';
-import { useSignInWithGoogle } from 'react-firebase-hooks/auth';
-import { Link } from 'react-router-dom';
+import { Link, redirect, useNavigate } from 'react-router-dom';
 import Logo from '../../../assets/images/logo.png';
-import auth from '../../../config/Firebase';
 import GoogleAuth from '../GoogleAuth';
-import { useLoginWithGoogleMutation } from '../../../redux/features/auth/authApi';
+import { useSelector } from 'react-redux';
+import { userCurrentToken } from '../../../redux/features/auth/authSlice';
 const Login = () => {
-	
-
+const token = useSelector(userCurrentToken);
+const navigate = useNavigate()
+useEffect(()=>{
+token && navigate("/") 
+},[token])
 	
 
 	return (
