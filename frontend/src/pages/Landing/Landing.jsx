@@ -2,7 +2,6 @@ import React from "react";
 import { Helmet } from "react-helmet";
 import "react-tabs/style/react-tabs.css";
 import Navbar from "../../components/UI Components/Navbar";
-import { useGetTodosQuery } from "../../redux/api";
 import Footer from "./components/Footer";
 import Hero2 from "./components/Hero2";
 import Instructions from "./components/Instructions";
@@ -10,8 +9,11 @@ import Reviews from "./components/Reviews";
 import SomeRecipe from "./components/SomeRecipe";
 
 const Landing = () => {
-  const {data, isLoading, isError} = useGetTodosQuery(undefined);
-  console.log(data);
+  // const {data, isLoading, isError} = useGetTodosQuery(undefined);
+  // // postTodo function and it can takes argument
+  // // object return data
+  // const[postTodo, object] = usePostTodoMutation()
+  // console.log(data);
   return (
     <div className="">
       <Helmet>
