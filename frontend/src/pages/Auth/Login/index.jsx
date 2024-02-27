@@ -4,13 +4,14 @@ import Logo from '../../../assets/images/logo.png';
 import GoogleAuth from '../GoogleAuth';
 import { useSelector } from 'react-redux';
 import { userCurrentToken } from '../../../redux/features/auth/authSlice';
+import { useLoginMutation } from '../../../redux/features/auth/authApi';
 const Login = () => {
-const token = useSelector(userCurrentToken);
-const navigate = useNavigate()
-useEffect(()=>{
-token && navigate("/") 
-},[token])
-	
+	const [addUser, { data, isError, isLoading }] = useLoginMutation();
+	const token = useSelector(userCurrentToken);
+	const navigate = useNavigate();
+	useEffect(() => {
+		token && navigate('/');
+	}, [token]);
 
 	return (
 		<>
@@ -22,7 +23,7 @@ token && navigate("/")
 						</div>
 						<div className="mt-12 flex flex-col items-center">
 							<div className="w-full flex-1 mt-8">
-								<GoogleAuth  />
+								<GoogleAuth />
 
 								<div className="my-12 border-b text-center">
 									<div className="leading-none px-2 inline-block text-sm text-gray-600 tracking-wide font-medium bg-white transform translate-y-1/2">
@@ -30,7 +31,7 @@ token && navigate("/")
 									</div>
 								</div>
 
-								<div className="mx-auto max-w-md">
+								<form className="mx-auto max-w-md">
 									<input
 										className="w-full px-7 py-3 rounded-lg font-medium bg-gray-100 border border-gray-200 placeholder-gray-500 text-sm focus:outline-none focus:border-gray-400 focus:bg-white"
 										type="email"
@@ -43,26 +44,6 @@ token && navigate("/")
 									/>
 
 									<div className="flex items-center justify-between mt-5">
-										{/* <div className="flex items-start">
-                      <div className="flex items-center h-5">
-                        <input
-                          id="remember"
-                          aria-describedby="remember"
-                          type="checkbox"
-                          className="w-4 h-4 border text-white border-gray-300 accent-[#F68712] rounded bg-gray-50 focus:ring-3 dark:focus:ring-primary-600 focus:rounded active:rounded"
-                          required=""
-                        />
-                      </div>
-                      <div className="ml-3 text-sm">
-                        <label
-                          htmlFor="remember"
-                          className="text-gray-500 dark:text-gray-300"
-                        >
-                          Remember me
-                        </label>
-                      </div>
-                    </div> */}
-
 										<div className="inline-flex items-center">
 											<div
 												className="relative flex items-center  rounded-full cursor-pointer"
@@ -120,7 +101,7 @@ token && navigate("/")
 											Sign up
 										</Link>
 									</p>
-								</div>
+								</form>
 							</div>
 						</div>
 					</div>
@@ -141,4 +122,4 @@ token && navigate("/")
 	);
 };
 
-export default (Login);
+export default Login;
