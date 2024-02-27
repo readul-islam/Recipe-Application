@@ -24,20 +24,20 @@ const Login = () => {
 	const [addUser, { data, isError, error, isLoading }] = useLoginMutation();
 
 	useEffect(() => {
-		token && navigate('/');
-		if (error) {
-			toast.error(error.data.message, {
-				position: 'top-right',
-				autoClose: 5000,
-				hideProgressBar: false,
-				closeOnClick: true,
-				pauseOnHover: true,
-				draggable: true,
-				progress: undefined,
-				theme: 'light',
-				transition: "Bounce",
-			});
-		}
+		token && navigate('/app');
+		// if (error) {
+		// 	toast.error(error.data.message, {
+		// 		position: 'top-right',
+		// 		autoClose: 5000,
+		// 		hideProgressBar: false,
+		// 		closeOnClick: true,
+		// 		pauseOnHover: true,
+		// 		draggable: true,
+		// 		progress: undefined,
+		// 		theme: 'light',
+		// 		transition: "Bounce",
+		// 	});
+		// }
 	}, [token, error]);
 
 	const submitHandler = async ({ email, password }) => {
