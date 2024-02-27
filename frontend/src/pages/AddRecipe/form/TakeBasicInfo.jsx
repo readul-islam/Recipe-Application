@@ -1,12 +1,13 @@
 import React from 'react';
 import Input from '../../../components/UI Components/Input';
+import { Field } from 'formik';
 
-const AddRecipeForm = () => {
+const TakeBasicInfo = () => {
 	return (
-		<form>
+		<>
 			<div className="grid grid-cols-2 gap-6 my-4">
-				<Input name="Title" placeholder="Enter Recipe Title" type={'text'} />
-				<label htmlFor="">
+				<Field as={Input} name="Title" placeholder="Enter Recipe Title" type={'text'} />
+				{/* <label htmlFor="">
 					<span className="pl-l font-semibold text-sm text-gray-500">Category</span>
 					<select
 						className="w-full px-2 mt-1 py-3 rounded-lg font-medium bg-gray-100 border border-gray-200 placeholder-gray-500 text-sm focus:outline-none focus:border-gray-400 focus:bg-white"
@@ -35,14 +36,15 @@ const AddRecipeForm = () => {
 						<option value="">Italian</option>
 						<option value="">Japanese</option>
 					</select>
-				</label>
+				</label> */}
 
-				<Input name="PrepTime" placeholder="" type={'text'} />
-				<Input name="CookTime" placeholder="" type={'text'} />
-				<Input name="TotalTime" placeholder="" type={'text'} />
-				<Input name="Servings" placeholder="" type={'text'} />
-				<Input name="Calory" placeholder="" type={'text'} />
+				<Field as={Input} name="PrepTime" placeholder="" type={'text'} />
+				<Field as={Input} name="CookTime" placeholder="" type={'text'} />
+				<Field as={Input} name="TotalTime" placeholder="" type={'text'} />
+				<Field as={Input} name="Servings" placeholder="" type={'text'} />
+				<Field as={Input} name="Calory" placeholder="" type={'text'} />
 			</div>
+
 			<label className="">
 				<span className="pl-l font-semibold text-sm text-gray-500">
 					description
@@ -54,8 +56,8 @@ const AddRecipeForm = () => {
 					rows={'4'}
 				/>
 			</label>
-		</form>
+		</>
 	);
 };
 
-export default AddRecipeForm;
+export default TakeBasicInfo;
