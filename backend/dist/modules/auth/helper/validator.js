@@ -68,4 +68,11 @@ exports.registerSchemaValidator = zod_1.z.object({
         .email({ message: 'email must be a valid email' }),
     provider: zod_1.z.enum(['google', 'local'], (0, zodCustomError_1.default)('provider', 'google or local')),
 });
-exports.loginSchemaValidator = zod_1.z.object({});
+exports.loginSchemaValidator = zod_1.z.object({
+    email: zod_1.z
+        .string({
+        required_error: 'email is required',
+    })
+        .email({ message: 'email must be a valid email' }),
+    password: zod_1.z.string()
+});

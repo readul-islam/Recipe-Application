@@ -10,7 +10,7 @@ const validator_1 = require("./helper/validator");
 const authRouter = express_1.default.Router();
 const router = express_1.default.Router();
 authRouter.post('/register', (0, middleware_1.validator)(validator_1.registerSchemaValidator), auth_controller_1.default.register);
-authRouter.post('/login', auth_controller_1.default.login);
+authRouter.post('/login', (0, middleware_1.validator)(validator_1.loginSchemaValidator), auth_controller_1.default.login);
 authRouter.post('/google', (0, middleware_1.validator)(validator_1.googleSchemaValidator), auth_controller_1.default.googleProvider);
 router.use('/auth', authRouter);
 exports.default = router;

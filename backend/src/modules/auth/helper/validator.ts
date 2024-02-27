@@ -66,4 +66,12 @@ export const registerSchemaValidator = z.object({
   ),
 })
 
-export const loginSchemaValidator = z.object({})
+export const loginSchemaValidator = z.object({
+  email: z
+  .string({
+    required_error: 'email is required',
+  })
+  .email({ message: 'email must be a valid email' }),
+  password:z.string()
+
+})
