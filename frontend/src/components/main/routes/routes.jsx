@@ -10,6 +10,8 @@ import About from '../../../pages/About';
 import Demo from '../../UI Components/Demo';
 import AddRecipe from '../../../pages/AddRecipe';
 import ProtectedRoute from '../container/ProtectedRoute';
+import { ErrorBoundary } from '../container/ErrorBoundary';
+import ErrorPage from '../../../pages/Error/ErrorPage';
 
 const router = createBrowserRouter([
 	{
@@ -37,9 +39,12 @@ const router = createBrowserRouter([
 		path: '/app',
 		element: (
 			<ProtectedRoute>
+				
 				<MainLayout />
+				
 			</ProtectedRoute>
 		),
+		
 		children: [
 			{
 				index: true,
@@ -63,6 +68,6 @@ const router = createBrowserRouter([
 			},
 		],
 	},
-]);
+],{});
 
 export default router;
