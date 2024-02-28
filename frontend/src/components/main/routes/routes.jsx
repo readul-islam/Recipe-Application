@@ -55,6 +55,14 @@ const router = createBrowserRouter([
 				element: <Overview />,
 			},
 			{
+				path: 'my-recipe',
+				element: <ErrorPage />,
+			},
+			{
+				path: 'setting',
+				element: <ErrorPage />,
+			},
+			{
 				path: 'recipes',
 				element: <Recipes />,
 			},

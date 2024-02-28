@@ -1,9 +1,11 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const ErrorPage = () => {
 	return (
 		<>
-			<section class="relative py-20 md:py-28 lg:py-52 overflow-hidden">
+		{/* py-20 md:py-28 lg:py-52 */}
+			<section class="relative h-full lg:py-32  overflow-hidden">
 				<div class="relative container px-4 mx-auto">
 					<div class="flex flex-wrap -mx-4 items-center">
 						<div class="w-full lg:w-1/2 px-4 mb-16 lg:mb-0">
@@ -32,13 +34,13 @@ const ErrorPage = () => {
 											Sorry, the page you are looking for doesn't exist or has been moved.
 											Try searching our site:
 										</p>
-										<a
-											class="relative group inline-block py-3 px-5 text-center text-sm font-semibold text-orange-50 bg-orange-900 rounded-full overflow-hidden"
-											href="#"
+										<Link to='/app'
+											class="relative group inline-block py-3 px-5 text-center text-sm font-semibold text-orange-50 bg-primary-default rounded-full overflow-hidden"
+										
 										>
-											<div class="absolute top-0 right-full w-full h-full bg-gray-900 transform group-hover:translate-x-full group-hover:scale-102 transition duration-500"></div>
+											<div class="absolute top-0 right-full w-full h-full bg-orange-900 transform group-hover:translate-x-full group-hover:scale-102 transition duration-500"></div>
 											<span class="relative">Take me home</span>
-										</a>
+										</Link>
 									</div>
 								</div>
 							</div>

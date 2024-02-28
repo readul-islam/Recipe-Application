@@ -12,7 +12,7 @@ const app = (0, express_1.default)();
 app.use(express_1.default.json());
 app.use(express_1.default.urlencoded({ extended: true }));
 app.use((0, cors_1.default)({
-    origin: ['https://assignment-3-rosy-sigma.verce', 'http://localhost:5173'],
+    origin: ['https://www.recipe.90to.com', "https://recipe-delta-roan.vercel.app", 'http://localhost:5173'],
 }));
 // db connection
 (0, dbConnection_1.default)();

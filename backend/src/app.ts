@@ -10,7 +10,7 @@ app.use(express.json())
 app.use(express.urlencoded({ extended: true }))
 app.use(
   cors({
-    origin: ['https://assignment-3-rosy-sigma.verce', 'http://localhost:5173'],
+    origin: ['https://www.recipe.90to.com',"https://recipe-delta-roan.vercel.app", 'http://localhost:5173'],
   }),
 )
 // db connection

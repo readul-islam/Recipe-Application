@@ -32,7 +32,7 @@ const sidebarRoutes = [
 		name: 'Own Recipe',
 		// Icon: <FilterIcon size={20} />,
 		Icon: <UserIcon className="w-5 h-5" />,
-		path: 'filter',
+		path: 'my-recipe',
 	},
 
 	{
