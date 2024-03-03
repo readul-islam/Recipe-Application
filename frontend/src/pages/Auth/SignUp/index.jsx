@@ -10,16 +10,16 @@ import { useRegisterMutation } from '../../../redux/features/auth/authApi';
 import { userCurrentToken } from '../../../redux/features/auth/authSlice';
 import { useSelector } from 'react-redux';
 const SignUp = () => {
-	const navigate = useNavigate()
-	const token = useSelector(userCurrentToken)
-	const [addUser, {isError, error, isLoading}] = useRegisterMutation()
-	const submitHandler = async ({password, email}) => {
-		const res = await addUser({email, password, provider:"local"}).unwrap();
-		res.code ==201 && navigate("/login")
+	const navigate = useNavigate();
+	const token = useSelector(userCurrentToken);
+	const [addUser, { isError, error, isLoading }] = useRegisterMutation();
+	const submitHandler = async ({ password, email }) => {
+		const res = await addUser({ email, password, provider: 'local' }).unwrap();
+		res.code == 201 && navigate('/login');
 	};
-	useEffect(()=>{
-		token && navigate("/app")
-	},[token])
+	useEffect(() => {
+		token && navigate('/app');
+	}, [token]);
 	return (
 		<>
 			{/* <!-- source:https://codepen.io/owaiswiz/pen/jOPvEPB --> */}
@@ -46,7 +46,7 @@ const SignUp = () => {
 									validationSchema={registerValidationSchema}
 								>
 									{({ handleSubmit, isSubmitting, setFieldValue }) => (
-										<Form autoComplete='true' onSubmit={handleSubmit}>
+										<Form autoComplete="true" onSubmit={handleSubmit}>
 											<ConnectedFocusError />
 											<div className="mx-auto max-w-md">
 												<div className="relative">
@@ -56,27 +56,25 @@ const SignUp = () => {
 														type="email"
 														placeholder="Email"
 													/>
-													<ErrorMessage name="email"/>
+													<ErrorMessage name="email" />
 												</div>
 												<div className="relative">
 													<Field
-													
 														name="password"
 														className="w-full px-4 py-3 rounded-lg font-medium bg-gray-100 border border-gray-200 placeholder-gray-500 text-sm focus:outline-none focus:border-gray-400 focus:bg-white mt-5"
 														type="password"
 														placeholder="Password"
 													/>
-														<ErrorMessage name="password"/>
+													<ErrorMessage name="password" />
 												</div>
 												<div className="relative">
 													<Field
-													
 														name="confirmPassword"
 														className="w-full px-4 py-3 rounded-lg font-medium bg-gray-100 border border-gray-200 placeholder-gray-500 text-sm focus:outline-none focus:border-gray-400 focus:bg-white mt-5"
 														type="password"
 														placeholder="Confirm Password"
 													/>
-														<ErrorMessage name="confirmPassword"/>
+													<ErrorMessage name="confirmPassword" />
 												</div>
 
 												<div className="flex items-center justify-between mt-5">

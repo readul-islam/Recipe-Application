@@ -6,9 +6,9 @@ const CustomCookieConsent = () => {
 	const [showBanner, setShowBanner] = useState(false);
 	useEffect(() => {
 		// Check if the user has already given consent
-		
+
 		const consent = Cookies.get('cookie-consent');
-		
+
 		if (!consent) {
 			setShowBanner(true);
 		}

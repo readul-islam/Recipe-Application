@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 const ErrorPage = () => {
 	return (
 		<>
-		{/* py-20 md:py-28 lg:py-52 */}
+			{/* py-20 md:py-28 lg:py-52 */}
 			<section class="relative h-full lg:py-32  overflow-hidden">
 				<div class="relative container px-4 mx-auto">
 					<div class="flex flex-wrap -mx-4 items-center">
@@ -34,9 +34,9 @@ const ErrorPage = () => {
 											Sorry, the page you are looking for doesn't exist or has been moved.
 											Try searching our site:
 										</p>
-										<Link to='/app'
+										<Link
+											to="/app"
 											class="relative group inline-block py-3 px-5 text-center text-sm font-semibold text-orange-50 bg-primary-default rounded-full overflow-hidden"
-										
 										>
 											<div class="absolute top-0 right-full w-full h-full bg-orange-900 transform group-hover:translate-x-full group-hover:scale-102 transition duration-500"></div>
 											<span class="relative">Take me home</span>

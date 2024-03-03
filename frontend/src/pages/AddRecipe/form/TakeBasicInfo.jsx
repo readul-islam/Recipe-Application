@@ -5,8 +5,13 @@ import { Field } from 'formik';
 const TakeBasicInfo = () => {
 	return (
 		<>
-			<div className="grid grid-cols-2 gap-6 my-4">
-				<Field as={Input} name="Title" placeholder="Enter Recipe Title" type={'text'} />
+			<div className="grid md:grid-cols-2 gap-1 md:gap-6 my-4">
+				<Field
+					as={Input}
+					name="Title"
+					placeholder="Enter Recipe Title"
+					type={'text'}
+				/>
 				{/* <label htmlFor="">
 					<span className="pl-l font-semibold text-sm text-gray-500">Category</span>
 					<select
