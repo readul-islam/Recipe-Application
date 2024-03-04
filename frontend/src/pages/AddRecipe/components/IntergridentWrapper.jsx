@@ -1,14 +1,22 @@
 import { PlusCircleIcon } from '@heroicons/react/24/outline';
 import React, { Children } from 'react';
+import { initialData } from '../form/TakeIngredientsAndTags';
 
-const IntergridentsWrapper = ({ children }) => {
+const IntergridentsWrapper = ({
+	handler,
+	intergridents,
+	setIntergridents,
+	children,
+}) => {
 	const arrayChildren = Children.toArray(children);
-	const handler = () => {};
+	console.log('custom children =>',arrayChildren)
+	console.log('react children =>',Children)
+
 	return (
 		<div id="Intergridents" className="max-h-72 overflow-y-scroll">
-			{Children.map(arrayChildren, (child, index) => {
+			{arrayChildren.map((child, index) => {
 				const isLast = index === arrayChildren.length - 1;
-				console.log(isLast);
+				console.log(isLast)
 				return (
 					<div>
 						{isLast && (
@@ -22,7 +30,7 @@ const IntergridentsWrapper = ({ children }) => {
 								</div>
 							</div>
 						)}
-						{children}
+						{child}
 					</div>
 				);
 			})}

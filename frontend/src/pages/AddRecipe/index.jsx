@@ -4,11 +4,14 @@ import {
 	UserIcon,
 } from '@heroicons/react/24/outline';
 import { Button, Step, Stepper, Typography } from '@material-tailwind/react';
-import { Form, Formik } from 'formik';
-import React, { useId } from 'react';
+import { Field, Form, Formik } from 'formik';
+import React, { useId, useState } from 'react';
 import UploadImageView from '../../components/UI Components/UploadImageView';
 import TakeBasicInfo from './form/TakeBasicInfo';
-import TakeIngredientsAndTags from './form/TakeIngredientsAndTags';
+import TakeIngredientsAndTags, {
+	initialData,
+} from './form/TakeIngredientsAndTags';
+import Input from '../../components/UI Components/Input';
 
 export default function AddRecipe() {
 	const formId = useId();
@@ -16,10 +19,11 @@ export default function AddRecipe() {
 	const [isLastStep, setIsLastStep] = React.useState(false);
 	const [isFirstStep, setIsFirstStep] = React.useState(false);
 
+	
 	const handleNext = () => !isLastStep && setActiveStep((cur) => cur + 1);
 	const handlePrev = () => !isFirstStep && setActiveStep((cur) => cur - 1);
 	const submitHandler = async (values) => {
-		console.log(values);
+		console.log(values, 's');
 	};
 
 	return (
@@ -75,17 +79,22 @@ export default function AddRecipe() {
 							TotalTime: '',
 							CookTime: '',
 							PrepTime: '',
+							text:''
 						}}
 						onSubmit={submitHandler}
 					>
 						{({ handleSubmit, isSubmitting, setFieldValue }) => (
 							<Form id={formId} onSubmit={handleSubmit}>
 								{activeStep === 0 && <TakeBasicInfo />}
-
-								{activeStep === 1 && <TakeIngredientsAndTags />}
+								<Field as={Input} name='text' type="file" placeholder="he"/>
 							</Form>
 						)}
 					</Formik>
+					{activeStep === 1 && (
+						<TakeIngredientsAndTags
+							
+						/>
+					)}
 				</div>
 
 				<div className="mt-4 flex justify-between">
