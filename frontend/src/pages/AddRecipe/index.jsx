@@ -12,6 +12,7 @@ import TakeIngredientsAndTags, {
 	initialData,
 } from './form/TakeIngredientsAndTags';
 import Input from '../../components/UI Components/Input';
+import TakeInstructions from './form/TakeInstractions';
 
 export default function AddRecipe() {
 	const formId = useId();
@@ -19,7 +20,6 @@ export default function AddRecipe() {
 	const [isLastStep, setIsLastStep] = React.useState(false);
 	const [isFirstStep, setIsFirstStep] = React.useState(false);
 
-	
 	const handleNext = () => !isLastStep && setActiveStep((cur) => cur + 1);
 	const handlePrev = () => !isFirstStep && setActiveStep((cur) => cur - 1);
 	const submitHandler = async (values) => {
@@ -42,7 +42,7 @@ export default function AddRecipe() {
 									variant="h6"
 									color={activeStep === 0 ? 'blue-gray' : 'gray'}
 								>
-									Step 1
+									Basic
 								</Typography>
 							</div>
 						</Step>
@@ -53,7 +53,7 @@ export default function AddRecipe() {
 									variant="h6"
 									color={activeStep === 1 ? 'blue-gray' : 'gray'}
 								>
-									Step 2
+									Intergridents & Tags
 								</Typography>
 							</div>
 						</Step>
@@ -64,7 +64,7 @@ export default function AddRecipe() {
 									variant="h6"
 									color={activeStep === 2 ? 'blue-gray' : 'gray'}
 								>
-									Step 3
+									Instruction & Thumbnail
 								</Typography>
 							</div>
 						</Step>
@@ -79,24 +79,20 @@ export default function AddRecipe() {
 							TotalTime: '',
 							CookTime: '',
 							PrepTime: '',
-							text:''
+							text: '',
 						}}
 						onSubmit={submitHandler}
 					>
 						{({ handleSubmit, isSubmitting, setFieldValue }) => (
 							<Form id={formId} onSubmit={handleSubmit}>
 								{activeStep === 0 && <TakeBasicInfo />}
-							
 							</Form>
 						)}
 					</Formik>
-					{activeStep === 1 && (
-						<TakeIngredientsAndTags
-							
-						/>
-					)}
+					{activeStep === 1 && <TakeIngredientsAndTags />}
+					{activeStep === 2 && <TakeInstructions />}
 				</div>
-{/* noting */}
+				{/* noting */}
 				<div className="mt-4 flex justify-between">
 					<Button
 						className="bg-primary-default"

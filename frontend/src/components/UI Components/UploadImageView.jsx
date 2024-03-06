@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 import uploadCloudinary from '../../utils/uploadCloudinary';
+import { ModalWrapper } from './ModalWrapper';
+import { DialogBody, DialogHeader } from '@material-tailwind/react';
 const data = [
 	'https://i.ibb.co/hVKWNxM/istockphoto-1457889029-612x612.jpg',
 	'https://i.ibb.co/hVKWNxM/istockphoto-1457889029-612x612.jpg',
@@ -12,7 +14,7 @@ const data = [
 	'https://i.ibb.co/hVKWNxM/istockphoto-1457889029-612x612.jpg',
 	'https://i.ibb.co/hVKWNxM/istockphoto-1457889029-612x612.jpg',
 ];
-const UploadImageView = () => {
+const UploadImageView = ({ handleOpen, open }) => {
 	const [images, setImages] = useState([]);
 	const [link, setLinks] = useState([]);
 
@@ -32,7 +34,7 @@ const UploadImageView = () => {
 	};
 
 	return (
-		<div className="border  rounded-md">
+		<ModalWrapper open={open} handleOpen={handleOpen}>
 			<div className="py-4 px-4 border-b  flex items-center justify-between">
 				<h3 className="font-semibold font-sans py-1.5">
 					Add Image in your Gallery
@@ -47,17 +49,20 @@ const UploadImageView = () => {
 					/>
 				</label>
 			</div>
-			<div className="min-h-96 px-4 py-4">
-				<div className="grid grid-cols-2 md:grid-cols-5 justify-items-center xl:grid-cols-7 2xl:grid-cols-10 gap-x-2 gap-y-3">
-					{link &&
-						link.map(({ url }) => (
-							<div className="md:w-32 md:h-32 h-28 w-28 border">
-								<img className="w-full h-full object-cover" src={url} alt="" />
-							</div>
-						))}
+
+			<div className="border  rounded-md">
+				<div className="min-h-96 px-4 py-4">
+					<div className="grid grid-cols-2 md:grid-cols-5 justify-items-center xl:grid-cols-7 2xl:grid-cols-10 gap-x-2 gap-y-3">
+						{link &&
+							link.map(({ url }) => (
+								<div className="md:w-32 md:h-32 h-28 w-28 border">
+									<img className="w-full h-full object-cover" src={url} alt="" />
+								</div>
+							))}
+					</div>
 				</div>
 			</div>
-		</div>
+		</ModalWrapper>
 	);
 };
 
