@@ -4,7 +4,7 @@ import { Field } from 'formik';
 
 const TakeBasicInfo = () => {
 	return (
-		<div className="px-4 bg-gray-50 py-4 rounded-md">
+		<div className="md:px-4 px-1 bg-gray-50 py-4 rounded-md">
 			<div className="bg-white px-4 py-4 rounded-md">
 				<div className="grid md:grid-cols-2 gap-1 md:gap-6 my-4  ">
 					<Field

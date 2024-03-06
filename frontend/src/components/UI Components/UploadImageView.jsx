@@ -37,7 +37,7 @@ const UploadImageView = ({ handleOpen, open }) => {
 		<ModalWrapper open={open} handleOpen={handleOpen}>
 			<div className="py-4 px-4 border-b  flex items-center justify-between">
 				<h3 className="font-semibold font-sans py-1.5">
-					Add Image in your Gallery
+					Select Image from your Gallery
 				</h3>
 				<label className="bg-orange-800 cursor-pointer text-white px-4 py-1.5 rounded-md">
 					Upload

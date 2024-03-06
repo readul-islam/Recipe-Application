@@ -24,7 +24,7 @@ export function ModalWrapper({ open, handleOpen, children }) {
 					<Button variant="text" color="red" onClick={handleOpen} className="mr-1">
 						<span>Cancel</span>
 					</Button>
-					<Button variant="gradient" color="green" onClick={handleOpen}>
+					<Button variant="gradient" color="yellow" onClick={handleOpen}>
 						<span>Confirm</span>
 					</Button>
 				</DialogFooter>

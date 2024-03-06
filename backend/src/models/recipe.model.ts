@@ -24,11 +24,7 @@ const recipeSchema = new Schema<TRecipe>({
   servings: { type: Number, required: true },
   category: { type: String }, // e.g., "Dessert", "Main Course"
   cuisine: { type: String }, // e.g., "Italian", "Japanese"
-  author: { type: String, required: true },
-  created: {
-    type: Date,
-    default: Date.now,
-  },
+  
   images: [{ type: String }], // Array of image URLs
   tags: [{ type: String }], // e.g., ["vegan", "gluten-free"]
 })

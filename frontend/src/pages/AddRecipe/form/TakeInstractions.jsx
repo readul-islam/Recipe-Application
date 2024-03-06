@@ -19,14 +19,14 @@ const TakeInstructions = () => {
 	};
 	return (
 		<>
-			<div className="px-4 bg-gray-50  rounded-md">
+			<div className="md:px-4 bg-gray-50  rounded-md">
 				<IntergridentsWrapper handler={handler}>
 					{instructions.map((inst, index) => (
-						<div className="bg-white relative px-4 py-2 rounded-md mb-4">
-							<span className="absolute top-2 right-2 text-gray-600 font-extrabold">
+						<div className="bg-white relative md:px-4 py-2 rounded-md mb-4">
+							<span className="absolute top-2 right-[50%] text-gray-600 font-extrabold">
 								No {index + 1}
 							</span>
-							<button className="bg-orange-400 py-1 px-2 block rounded-lg mb-2 text-xs">
+							<button onClick={handleOpen} className="bg-orange-400 py-1 px-2 block rounded-lg mb-2 text-xs">
 								Add Image
 							</button>
 							<label className="">
@@ -52,9 +52,7 @@ const TakeInstructions = () => {
 					))}
 				</IntergridentsWrapper>
 
-				<Button onClick={handleOpen} variant="gradient">
-					Open Dialog
-				</Button>
+			
 			</div>
 			<UploadImageView open={open} handleOpen={handleOpen} />
 		</>
