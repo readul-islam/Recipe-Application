@@ -86,7 +86,7 @@ export default function AddRecipe() {
 						{({ handleSubmit, isSubmitting, setFieldValue }) => (
 							<Form id={formId} onSubmit={handleSubmit}>
 								{activeStep === 0 && <TakeBasicInfo />}
-								<Field as={Input} name='text' type="file" placeholder="he"/>
+							
 							</Form>
 						)}
 					</Formik>

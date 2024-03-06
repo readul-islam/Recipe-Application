@@ -9,14 +9,17 @@ const IntergridentsWrapper = ({
 	children,
 }) => {
 	const arrayChildren = Children.toArray(children);
-	console.log('custom children =>',arrayChildren)
-	console.log('react children =>',Children)
+	console.log('custom children =>', arrayChildren);
+	console.log('react children =>', Children);
 
 	return (
-		<div id="Intergridents" className="max-h-72 overflow-y-scroll">
+		<div
+			id="Intergridents"
+			className="min-h-80 max-h-[450px] overflow-y-scroll px-4 bg-gray-50 pt-6 rounded-md"
+		>
 			{arrayChildren.map((child, index) => {
 				const isLast = index === arrayChildren.length - 1;
-				console.log(isLast)
+				console.log(isLast);
 				return (
 					<div>
 						{isLast && (

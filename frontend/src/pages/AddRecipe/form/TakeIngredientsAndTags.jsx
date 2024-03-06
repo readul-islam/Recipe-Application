@@ -3,27 +3,32 @@ import { Field } from 'formik';
 import React, { useState } from 'react';
 import Input from '../../../components/UI Components/Input';
 import IntergridentsWrapper from '../components/IntergridentWrapper';
+import { TagField } from '../../../components/UI Components/TagField';
+import useTag from '../../../hooks/useTag';
 
 export const initialData = {
 	name: '',
-	quantity: 0,
+	quantity: '',
 	note: '',
 };
 
 const TakeIngredientsAndTags = () => {
-	const [intergridents, setIntergridents] = useState([{ ...initialData }]);
+	const MAX_TAGS = 5;
+	const [intergridents, setIntergridents] = useState([
+		{ ...initialData },
+		{ ...initialData },
+	]);
+	const { tags, handleAddTag, handleRemoveTag } = useTag(MAX_TAGS);
 	const handler = () => {
 		setIntergridents((pre) => [...pre, initialData]);
 	};
 
 	return (
 		<div>
-			<h3 className="px-1  text-md font-semibold ">Intergridents</h3>
-
 			<IntergridentsWrapper handler={handler}>
 				{intergridents.map((inter, index) => (
-					<div key={index} className="border p-4 rounded-lg mb-2">
-						<div className="ingredients-section grid md:grid-cols-2 md:gap-6 ">
+					<div key={index} className=" p-4 rounded-lg  bg-white mb-4">
+						<div className="ingredients-section grid md:grid-cols-2 md:gap-6 mb-1 ">
 							<Input
 								onChange={(e) => {
 									setIntergridents((prevArr) => {
@@ -33,9 +38,10 @@ const TakeIngredientsAndTags = () => {
 									});
 								}}
 								value={inter.name}
-								style="!py-2"
+								label="name"
+								style="!py-2.5 bg-transparent"
 								name="name"
-								placeholder=""
+								placeholder="Enter intergridents name"
 								type={'text'}
 							/>
 							<Input
@@ -47,14 +53,15 @@ const TakeIngredientsAndTags = () => {
 									});
 								}}
 								value={inter.quantity}
-								style="!py-2"
+								style="!py-2.5 bg-transparent"
 								name="quantity"
-								placeholder=""
+								label="quantity"
+								placeholder="Ex: 1 pis or 1 kg or 1 gm ..."
 								type={'text'}
 							/>
 						</div>
 						<label className="">
-							<span className="pl-l font-semibold text-sm text-gray-500">Note</span>
+							<span className="pl-l  font-semibold text-sm text-gray-500">Note</span>
 							<textarea
 								onChange={(e) => {
 									setIntergridents((prevArr) => {
@@ -65,7 +72,7 @@ const TakeIngredientsAndTags = () => {
 								}}
 								value={inter.note}
 								placeholder="Enter your short description....."
-								className="w-full px-3 mt-1 py-2 rounded-lg font-medium bg-gray-100 border border-gray-200 placeholder-gray-500 text-sm focus:outline-none focus:border-gray-400 focus:bg-white"
+								className="w-full px-3  py-2 rounded-lg font-medium bg-transparent border border-gray-200 placeholder-gray-500 text-sm focus:outline-none focus:border-gray-400 focus:bg-white"
 								col=""
 								rows={'2'}
 							/>
@@ -73,35 +80,17 @@ const TakeIngredientsAndTags = () => {
 					</div>
 				))}
 			</IntergridentsWrapper>
-			<h3 className="px-1 pb-2 text-md font-semibold mb-">Tags</h3>
 
-
-			
-			{/* <div className="max-h-72 overflow-y-scroll ">
-				<div className="border p-4 rounded-xl mb-2">
-					<div className="ingredients-section grid md:grid-cols-2 md:gap-6 ">
-						<Field as={Input} name="name" placeholder="" type={'text'} />
-						<Field as={Input} name="quantity" placeholder="" type={'text'} />
-					</div>
-					<Field name="firstName" component={TextArea} placeholder="First Name" />
-				</div>
-				
-			</div> */}
+			<div className="min-h-36 overflow-y-scroll  px-4 bg-gray-50 py-6 rounded-md">
+				<TagField
+					tags={tags}
+					addTag={handleAddTag}
+					removeTag={handleRemoveTag}
+					maxTags={MAX_TAGS}
+				/>
+			</div>
 		</div>
 	);
 };
 
 export default TakeIngredientsAndTags;
-//const TextArea = () => {
-// 	return (
-// 		<label className="">
-// 			<span className="pl-l font-semibold text-sm text-gray-500">Note</span>
-// 			<textarea
-// 				placeholder="Enter your short description....."
-// 				className="w-full px-7 mt-1 py-3 rounded-lg font-medium bg-gray-100 border border-gray-200 placeholder-gray-500 text-sm focus:outline-none focus:border-gray-400 focus:bg-white"
-// 				col=""
-// 				rows={'2'}
-// 			/>
-// 		</label>
-// 	);
-// };
