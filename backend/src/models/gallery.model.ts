@@ -4,7 +4,7 @@ type TGallery = {
   img: string
   userId: mongoose.ObjectId
 }
-
+// d
 const gallerySchema = new Schema<TGallery>({
   img: {
     type: String,
