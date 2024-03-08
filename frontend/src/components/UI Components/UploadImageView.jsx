@@ -2,22 +2,18 @@ import React, { useState } from 'react';
 import uploadCloudinary from '../../utils/uploadCloudinary';
 import { ModalWrapper } from './ModalWrapper';
 import { DialogBody, DialogHeader } from '@material-tailwind/react';
-const data = [
-	'https://i.ibb.co/hVKWNxM/istockphoto-1457889029-612x612.jpg',
-	'https://i.ibb.co/hVKWNxM/istockphoto-1457889029-612x612.jpg',
-	'https://i.ibb.co/hVKWNxM/istockphoto-1457889029-612x612.jpg',
-	'https://i.ibb.co/hVKWNxM/istockphoto-1457889029-612x612.jpg',
-	'https://i.ibb.co/hVKWNxM/istockphoto-1457889029-612x612.jpg',
-	'https://i.ibb.co/hVKWNxM/istockphoto-1457889029-612x612.jpg',
-	'https://i.ibb.co/hVKWNxM/istockphoto-1457889029-612x612.jpg',
-	'https://i.ibb.co/hVKWNxM/istockphoto-1457889029-612x612.jpg',
-	'https://i.ibb.co/hVKWNxM/istockphoto-1457889029-612x612.jpg',
-	'https://i.ibb.co/hVKWNxM/istockphoto-1457889029-612x612.jpg',
-];
+import { useSelector } from 'react-redux';
+import { userCurrentUser } from '../../redux/features/auth/authSlice';
+import { useGetImagesQuery } from '../../Api/commonApi';
+
 const UploadImageView = ({ handleOpen, open }) => {
 	const [images, setImages] = useState([]);
 	const [link, setLinks] = useState([]);
+	const user = useSelector(userCurrentUser);
+	console.log(user)
 
+	const {data:addData} = useGetImagesQuery();
+	
 	const uploadImageHandler = async (e) => {
 		const images = e.target.files;
 		console.log(images);
