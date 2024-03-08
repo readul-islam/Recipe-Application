@@ -59,9 +59,9 @@ const TakeInstructions = () => {
 					))}
 				</IntergridentsWrapper>
 			</div>
-<AddThumbnail/>
-			
-			<UploadImageView open={open} handleOpen={handleOpen} />
+			<AddThumbnail />
+
+			{open && <UploadImageView open={open} handleOpen={handleOpen} />}
 		</>
 	);
 };

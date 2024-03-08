@@ -20,6 +20,8 @@ app.get('/', (req, res) => {
   res.status(200).send({ success: true })
 })
 
+
+
 // App router
 app.use('/api/v1', appRouter)
 

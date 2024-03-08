@@ -14,7 +14,7 @@ const imageApi = baseApi.injectEndpoints({
 				method: 'POST',
 				body: credentials,
 			}),
-			// invalidatesTags: ['images'],
+			invalidatesTags: ['images'],
 		}),
 		getImages: builder.query({
 			query: (credentials) => ({
@@ -22,7 +22,7 @@ const imageApi = baseApi.injectEndpoints({
 				method: 'GET',
 				params: credentials,
 			}),
-			// providesTags: ['images'],
+			providesTags: ['images'],
 		}),
 	}),
 });

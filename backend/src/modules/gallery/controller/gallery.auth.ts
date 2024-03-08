@@ -1,5 +1,6 @@
 import { STATUS } from '../../../config'
 import CatchAsync from '../../../utils/catchAsync'
+
 import { getImage, uploadImage } from '../services'
 
 // handleRequestWrapper is a custom wrapper that used for avoid try catch repetition

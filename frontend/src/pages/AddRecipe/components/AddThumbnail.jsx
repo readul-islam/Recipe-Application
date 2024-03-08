@@ -6,6 +6,7 @@ const AddThumbnail = () => {
 	const handleOpen = () => {
 		setOpen(!open);
 	};
+	const imageHandler = () => {};
 	return (
 		<>
 			<div className="my-4 min-h-32">
@@ -19,7 +20,13 @@ const AddThumbnail = () => {
 					</span>
 				</p>
 			</div>
-			<UploadImageView open={open} handleOpen={handleOpen} />
+			{open && (
+				<UploadImageView
+					imageHandler={imageHandler}
+					open={open}
+					handleOpen={handleOpen}
+				/>
+			)}
 		</>
 	);
 };
