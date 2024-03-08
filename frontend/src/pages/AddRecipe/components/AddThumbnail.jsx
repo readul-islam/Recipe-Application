@@ -3,22 +3,34 @@ import UploadImageView from '../../../components/UI Components/UploadImageView';
 
 const AddThumbnail = () => {
 	const [open, setOpen] = useState(false);
+	const [thumbnail, setThumbnail] = useState('');
 	const handleOpen = () => {
 		setOpen(!open);
 	};
-	const imageHandler = () => {};
+	const imageHandler = (image) => {
+		setThumbnail(image);
+	};
 	return (
 		<>
 			<div className="my-4 min-h-32">
-				<p>
-					Add Thumbnail{' '}
-					<span
+				<p className="font-semibold flex items-center gap-2">
+					Add Thumbnail
+					<p
 						onClick={handleOpen}
-						className="text-sm px-2 bg-orange-400 rounded-full py-1 cursor-pointer"
+						className="text-sm px-4 bg-gray-400 text-center rounded-full py-1 cursor-pointer"
 					>
 						select
-					</span>
+					</p>
 				</p>
+				<div className="md:w-32 md:h-32 h-28 w-28  my-2 ">
+					{thumbnail && (
+						<img
+							className="w-full h-full object-cover rounded-md"
+							src={thumbnail}
+							alt="thumbnail"
+						/>
+					)}
+				</div>
 			</div>
 			{open && (
 				<UploadImageView

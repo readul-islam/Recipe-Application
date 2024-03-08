@@ -1,8 +1,7 @@
-import { Button } from '@material-tailwind/react';
 import React, { useState } from 'react';
 import UploadImageView from '../../../components/UI Components/UploadImageView';
-import IntergridentsWrapper from '../components/IntergridentWrapper';
-import AddThumbnail from '../components/AddThumbnail';
+import AddThumbnail from './AddThumbnail';
+import IntergridentsWrapper from './IntergridentWrapper';
 
 const initialInt = {
 	instruction: '',
@@ -12,11 +11,19 @@ const initialInt = {
 const TakeInstructions = () => {
 	const [open, setOpen] = React.useState(false);
 	const [instructions, setInstructions] = useState([{ ...initialInt }]);
+	const [selectedCard, setSelectedCard] = useState('');
 	const handler = () => {
 		setInstructions((pre) => [...pre, initialInt]);
 	};
 	const handleOpen = () => {
 		setOpen(!open);
+	};
+	const imageHandler = (img) => {
+		setInstructions((prevArr) => {
+			const result = [...prevArr];
+			result[selectedCard]['img'] = img;
+			return result;
+		});
 	};
 	return (
 		<>
@@ -28,14 +35,30 @@ const TakeInstructions = () => {
 							className="bg-white relative md:px-4 py-2 rounded-md mb-4"
 						>
 							<span className="absolute top-2 right-[50%] text-gray-600 font-extrabold">
-								No {index + 1}
+								Step {index + 1}
 							</span>
+
 							<button
-								onClick={handleOpen}
+								onClick={() => {
+									handleOpen();
+									setSelectedCard(index);
+								}}
 								className="bg-orange-400 py-1 px-2 block rounded-lg mb-2 text-xs"
 							>
 								Add Image
 							</button>
+							{inst.img && (
+								<div className="md:w-14 absolute left-24 top-2  md:h-[52px]   ">
+									{
+										<img
+											className="w-full rounded-md h-full object-cover"
+											src={inst.img}
+											alt="thumbnail"
+										/>
+									}
+								</div>
+							)}
+
 							<label className="">
 								<span className="  font-semibold text-sm text-gray-500">
 									Instruction
@@ -61,7 +84,13 @@ const TakeInstructions = () => {
 			</div>
 			<AddThumbnail />
 
-			{open && <UploadImageView open={open} handleOpen={handleOpen} />}
+			{open && (
+				<UploadImageView
+					imageHandler={imageHandler}
+					open={open}
+					handleOpen={handleOpen}
+				/>
+			)}
 		</>
 	);
 };

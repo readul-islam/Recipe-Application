@@ -1,10 +1,8 @@
-import { PlusCircleIcon } from '@heroicons/react/24/outline';
-import { Field } from 'formik';
 import React, { useState } from 'react';
 import Input from '../../../components/UI Components/Input';
-import IntergridentsWrapper from '../components/IntergridentWrapper';
 import { TagField } from '../../../components/UI Components/TagField';
 import useTag from '../../../hooks/useTag';
+import IntergridentsWrapper from './IntergridentWrapper';
 
 export const initialData = {
 	name: '',

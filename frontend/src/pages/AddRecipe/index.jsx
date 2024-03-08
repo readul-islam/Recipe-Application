@@ -4,15 +4,11 @@ import {
 	UserIcon,
 } from '@heroicons/react/24/outline';
 import { Button, Step, Stepper, Typography } from '@material-tailwind/react';
-import { Field, Form, Formik } from 'formik';
-import React, { useId, useState } from 'react';
-import UploadImageView from '../../components/UI Components/UploadImageView';
-import TakeBasicInfo from './form/TakeBasicInfo';
-import TakeIngredientsAndTags, {
-	initialData,
-} from './form/TakeIngredientsAndTags';
-import Input from '../../components/UI Components/Input';
-import TakeInstructions from './form/TakeInstractions';
+import { Form, Formik } from 'formik';
+import React, { useId } from 'react';
+import TakeBasicInfo from './components/TakeBasicInfo';
+import TakeIngredientsAndTags from './components/TakeIngredientsAndTags';
+import TakeInstructions from './components/TakeInstractions';
 
 export default function AddRecipe() {
 	const formId = useId();

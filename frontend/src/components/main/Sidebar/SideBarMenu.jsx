@@ -53,7 +53,7 @@ const SideBarMenu = () => {
 					className={({ isActive }) =>
 						isActive
 							? 'text-sidebarText-active tracking-wide font-semibold bg-[#ffffff] px-2 py-1.5 rounded-lg'
-							: 'text-sidebarText-inactive hover:bg-[#ffffff] px-2 py-1.5 rounded-lg hover:text-sidebarText-active hover:font-semibold tracking-wide'
+							: ' hover:bg-[#ffffff] px-2 py-1.5 rounded-lg hover:text-sidebarText-active hover:font-semibold tracking-wide'
 					}
 				>
 					<div className="flex items-center space-x-2">
