@@ -9,9 +9,14 @@ export const initialInt = {
 	img: '',
 };
 
-const TakeInstructions = ({instructions,setInstructions,thumbnail, setThumbnail}) => {
+const TakeInstructions = ({
+	instructions,
+	setInstructions,
+	thumbnail,
+	setThumbnail,
+}) => {
 	const [open, setOpen] = React.useState(false);
-	
+
 	const [selectedCard, setSelectedCard] = useState('');
 	const handler = () => {
 		setInstructions((pre) => [...pre, initialInt]);
@@ -79,17 +84,17 @@ const TakeInstructions = ({instructions,setInstructions,thumbnail, setThumbnail}
 									rows={'4'}
 								/>
 							</label> */}
-							<TextArea onChange={(e) => {
-										setInstructions((prevArr) => {
-											const result = [...prevArr];
-											result[index]['instruction'] = e.target.value;
-											return result;
-										});
-									}}
-									value={inst.note}
-									 label={'Instruction'}
-									 
-									 />
+							<TextArea
+								onChange={(e) => {
+									setInstructions((prevArr) => {
+										const result = [...prevArr];
+										result[index]['instruction'] = e.target.value;
+										return result;
+									});
+								}}
+								value={inst.note}
+								label={'Instruction'}
+							/>
 						</div>
 					))}
 				</IntergridentsWrapper>

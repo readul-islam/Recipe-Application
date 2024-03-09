@@ -67,7 +67,7 @@ const TakeBasicInfo = () => {
 					/>
 				</div>
 
-				<Field as={TextArea} name='description' label='description'/>
+				<Field as={TextArea} name="description" label="description" />
 			</div>
 		</div>
 	);

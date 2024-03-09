@@ -10,10 +10,15 @@ export const initialData = {
 	note: '',
 };
 
-const TakeIngredientsAndTags = ({tags, handleAddTag, handleRemoveTag,intergridents, setIntergridents}) => {
+const TakeIngredientsAndTags = ({
+	tags,
+	handleAddTag,
+	handleRemoveTag,
+	intergridents,
+	setIntergridents,
+}) => {
 	const MAX_TAGS = 5;
-	
-	
+
 	const handler = () => {
 		setIntergridents((pre) => [...pre, initialData]);
 	};

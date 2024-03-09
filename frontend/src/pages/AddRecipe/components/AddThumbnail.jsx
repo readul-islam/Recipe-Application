@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
 import UploadImageView from '../../../components/UI Components/UploadImageView';
 
-const AddThumbnail = ({thumbnail, setThumbnail}) => {
+const AddThumbnail = ({ thumbnail, setThumbnail }) => {
 	const [open, setOpen] = useState(false);
-	
+
 	const handleOpen = () => {
 		setOpen(!open);
 	};
