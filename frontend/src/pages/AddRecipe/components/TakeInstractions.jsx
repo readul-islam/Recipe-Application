@@ -2,15 +2,16 @@ import React, { useState } from 'react';
 import UploadImageView from '../../../components/UI Components/UploadImageView';
 import AddThumbnail from './AddThumbnail';
 import IntergridentsWrapper from './IntergridentWrapper';
+import TextArea from '../../../components/UI Components/TextArea';
 
-const initialInt = {
+export const initialInt = {
 	instruction: '',
 	img: '',
 };
 
-const TakeInstructions = () => {
+const TakeInstructions = ({instructions,setInstructions,thumbnail, setThumbnail}) => {
 	const [open, setOpen] = React.useState(false);
-	const [instructions, setInstructions] = useState([{ ...initialInt }]);
+	
 	const [selectedCard, setSelectedCard] = useState('');
 	const handler = () => {
 		setInstructions((pre) => [...pre, initialInt]);
@@ -59,7 +60,7 @@ const TakeInstructions = () => {
 								</div>
 							)}
 
-							<label className="">
+							{/* <label className="">
 								<span className="  font-semibold text-sm text-gray-500">
 									Instruction
 								</span>
@@ -77,12 +78,23 @@ const TakeInstructions = () => {
 									col=""
 									rows={'4'}
 								/>
-							</label>
+							</label> */}
+							<TextArea onChange={(e) => {
+										setInstructions((prevArr) => {
+											const result = [...prevArr];
+											result[index]['instruction'] = e.target.value;
+											return result;
+										});
+									}}
+									value={inst.note}
+									 label={'Instruction'}
+									 
+									 />
 						</div>
 					))}
 				</IntergridentsWrapper>
 			</div>
-			<AddThumbnail />
+			<AddThumbnail thumbnail={thumbnail} setThumbnail={setThumbnail} />
 
 			{open && (
 				<UploadImageView

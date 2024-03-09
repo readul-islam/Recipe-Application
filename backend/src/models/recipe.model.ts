@@ -8,7 +8,7 @@ const ingredientSchema = new Schema<TIngredient>({
 })
 
 const stepSchema = new Schema<TStep>({
-  stepNumber: { type: Number, required: true },
+
   instruction: { type: String, required: true },
   img: { type: String },
 })
@@ -23,9 +23,10 @@ const recipeSchema = new Schema<TRecipe>({
   totalTime: { type: Number, required: true },
   servings: { type: Number, required: true },
   category: { type: String }, // e.g., "Dessert", "Main Course"
+  calory: { type: String },
   cuisine: { type: String }, // e.g., "Italian", "Japanese"
   
-  images: [{ type: String }], // Array of image URLs
+  thumbnail: { type: String }, // Array of image URLs
   tags: [{ type: String }], // e.g., ["vegan", "gluten-free"]
 })
 

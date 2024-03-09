@@ -1,6 +1,7 @@
 import React from 'react';
 import Input from '../../../components/UI Components/Input';
 import { Field } from 'formik';
+import TextArea from '../../../components/UI Components/TextArea';
 
 const TakeBasicInfo = () => {
 	return (
@@ -60,23 +61,13 @@ const TakeBasicInfo = () => {
 					<Field
 						as={Input}
 						label="Total calory"
-						name="cuisine"
+						name="calory"
 						placeholder="Ex: 128 cal"
 						type={'text'}
 					/>
 				</div>
 
-				<label className="">
-					<span className="pl-l font-semibold text-[12px] text-gray-500  uppercase">
-						description
-					</span>
-					<textarea
-						placeholder="Enter your short description....."
-						className="w-full px-7 mt-1 py-3 rounded-lg font-medium border border-gray-200 placeholder-gray-500 text-sm focus:outline-none focus:border-gray-400 focus:bg-white"
-						col=""
-						rows={'4'}
-					/>
-				</label>
+				<Field as={TextArea} name='description' label='description'/>
 			</div>
 		</div>
 	);
