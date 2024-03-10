@@ -22,7 +22,7 @@ const TakeIngredientsAndTags = ({
 	const handler = () => {
 		setIntergridents((pre) => [...pre, initialData]);
 	};
-
+// 
 	return (
 		<div>
 			<IntergridentsWrapper handler={handler}>
