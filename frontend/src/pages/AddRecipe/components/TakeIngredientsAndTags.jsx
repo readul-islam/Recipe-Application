@@ -87,8 +87,9 @@ const TakeIngredientsAndTags = ({
 					addTag={handleAddTag}
 					removeTag={handleRemoveTag}
 					maxTags={MAX_TAGS}
-				/>
-			</div>
+			// 
+			/>
+							</div>
 		</div>
 	);
 };
